@@ -47,7 +47,9 @@ internal static class CompetitiveSets
 
     private static int AbilityId(string name)
     {
-        var id = Array.FindIndex(GameInfo.Strings.Ability, ability => ability.Equals(name, StringComparison.OrdinalIgnoreCase));
+        var id = GameInfo.Strings.Ability
+            .Select((ability, index) => (ability, index))
+            .FirstOrDefault(entry => entry.ability.Equals(name, StringComparison.OrdinalIgnoreCase)).index;
         return id > 0 ? id : throw new InvalidDataException($"Unknown ability '{name}' in {ResourceName}.");
     }
 
