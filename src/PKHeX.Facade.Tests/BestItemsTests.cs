@@ -11,16 +11,21 @@ public class BestItemsTests
         .Sum(item => item.Count);
 
     [Fact]
-    public void GivesTheBestItemsInGeneration4()
+    public void GivesTheBestItemsInGeneration4InTheirOwnPouches()
     {
         var game = SaveFilePath.Load(SaveFilePath.HgSs);
 
         game.Trainer.Inventories.AddBestItems().Should().Be(15);
 
-        foreach (var name in new[] { "Rare Candy", "Master Ball", "Max Repel", "Full Restore", "Max Revive", "Full Heal" })
-            CountOf(game, name).Should().Be(995, name);
-        foreach (var name in new[] { "Fire Stone", "Water Stone", "Thunder Stone", "Leaf Stone", "Moon Stone", "Sun Stone", "Dawn Stone", "Dusk Stone", "Shiny Stone" })
-            CountOf(game, name).Should().Be(10, name);
+        (string Name, string Pouch, int Count)[] expected =
+        [
+            ("Rare Candy", "Medicine", 995), ("Full Restore", "Medicine", 995), ("Max Revive", "Medicine", 995), ("Full Heal", "Medicine", 995),
+            ("Master Ball", "Balls", 995), ("Max Repel", "Items", 995),
+            ("Fire Stone", "Items", 10), ("Water Stone", "Items", 10), ("Thunder Stone", "Items", 10), ("Leaf Stone", "Items", 10), ("Moon Stone", "Items", 10),
+            ("Sun Stone", "Items", 10), ("Dawn Stone", "Items", 10), ("Dusk Stone", "Items", 10), ("Shiny Stone", "Items", 10),
+        ];
+        foreach (var (name, pouch, count) in expected)
+            game.Trainer.Inventories[pouch].AllExceptNone().Where(item => item.Name == name).Sum(item => item.Count).Should().Be(count, $"{name} in {pouch}");
     }
 
     [Fact]
