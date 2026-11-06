@@ -8,6 +8,7 @@ const debugFramework = join(host, 'Debug/net10.0/wwwroot/_framework')
 const publishedFramework = join(host, 'Release/net10.0/publish/wwwroot/_framework')
 
 export default defineConfig(({ command }) => ({
+  base: process.env.BASE_PATH ?? '/',
   plugins: [
     react(),
     pkhexEngine({ frameworkDir: command === 'serve' ? debugFramework : publishedFramework }),
