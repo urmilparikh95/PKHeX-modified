@@ -7,7 +7,7 @@ export type Invoke = <T>(call: CallName, args: unknown[]) => Promise<T>
 
 export const queries = ['box.get', 'box.list', 'box.previewFile', 'box.showdown', 'catalog.names', 'encounters.events', 'encounters.search', 'encounters.versions', 'events.flag', 'events.get', 'game.balls', 'game.blankVersions', 'game.formats', 'game.get', 'game.heldItems', 'game.languages', 'game.moves', 'game.natures', 'game.originGames', 'game.progress', 'game.types', 'game.version', 'inventory.get', 'mysteryGift.events', 'mysteryGift.previewEvent', 'mysteryGift.previewFile', 'mysteryGift.status', 'party.get', 'party.showdown', 'plugins.actions', 'plugins.details', 'plugins.failures', 'plugins.installed', 'plugins.isSupported', 'plugins.pageModule', 'plugins.pages', 'plugins.setting', 'plugins.state', 'pokemon.details', 'pokemon.export', 'pokemon.get', 'pokemon.options', 'pokemon.read', 'pokemon.showdown', 'species.list', 'team.get', 'team.list', 'trainer.badges', 'trainer.get', 'transfer.convert', 'transfer.details', 'transfer.export', 'transfer.get', 'transfer.partnerBoxes', 'transfer.preview'] as const
 
-export const commands = ['box.addEncounter', 'box.addFromFile', 'events.giveTickets', 'events.setFlag', 'events.setWork', 'game.close', 'game.enableFormat', 'game.export', 'game.file', 'game.load', 'game.loadBlank', 'inventory.addBestItems', 'inventory.setItem', 'mysteryGift.insertEvent', 'mysteryGift.insertFile', 'mysteryGift.remove', 'mysteryGift.setReceived', 'mysteryGift.setUnlocked', 'plugins.dismissFailure', 'plugins.newestCompatible', 'plugins.register', 'plugins.run', 'plugins.setEnabled', 'plugins.setHookEnabled', 'plugins.unregister', 'plugins.updateSetting', 'pokemon.addToBox', 'pokemon.clone', 'pokemon.commit', 'pokemon.edit', 'pokemon.enhance', 'pokemon.enhanceAll', 'pokemon.enhanceMoveset', 'pokemon.setLevel', 'pokemon.update', 'team.clear', 'team.place', 'trainer.setBadges', 'trainer.setBattlePoints', 'trainer.setGender', 'trainer.setMoney', 'trainer.setName', 'transfer.close', 'transfer.commit', 'transfer.open'] as const
+export const commands = ['box.addEncounter', 'box.addFromFile', 'events.giveTickets', 'events.setFlag', 'events.setWork', 'game.close', 'game.enableFormat', 'game.export', 'game.file', 'game.load', 'game.loadBlank', 'inventory.addBestItems', 'inventory.addHeldItems', 'inventory.setItem', 'mysteryGift.insertEvent', 'mysteryGift.insertFile', 'mysteryGift.remove', 'mysteryGift.setReceived', 'mysteryGift.setUnlocked', 'plugins.dismissFailure', 'plugins.newestCompatible', 'plugins.register', 'plugins.run', 'plugins.setEnabled', 'plugins.setHookEnabled', 'plugins.unregister', 'plugins.updateSetting', 'pokemon.addToBox', 'pokemon.clone', 'pokemon.commit', 'pokemon.edit', 'pokemon.enhance', 'pokemon.enhanceAll', 'pokemon.enhanceMoveset', 'pokemon.setLevel', 'pokemon.update', 'team.clear', 'team.place', 'trainer.setBadges', 'trainer.setBattlePoints', 'trainer.setGender', 'trainer.setMoney', 'trainer.setName', 'transfer.close', 'transfer.commit', 'transfer.open'] as const
 
 export type QueryName = (typeof queries)[number]
 
@@ -102,6 +102,8 @@ export interface EngineClient {
   inventory: {
     /** Gives 995 each of Rare Candy, Master Ball, Max Repel, Full Restore, Max Revive and Full Heal, and 10 of each evolution stone, in the pouch that holds each one. A count above what the pouch holds is lowered to it. An item the save has no pouch for, or no free slot for, is skipped. Returns how many kinds of item were set. Requires a loaded save; throws `no-save` otherwise. */
     addBestItems(): Promise<number>
+    /** Gives one of each item a Pokémon holds, including the ones that make Pokémon evolve, in the Items pouch. Berries and the other pouches aren't touched. Generation 4 only. An item the pouch already has keeps its count, and one with no free slot is skipped. Returns how many items were added. Fails with `not-supported` outside Generation 4. Requires a loaded save; throws `no-save` otherwise. */
+    addHeldItems(): Promise<number>
     /** Requires a loaded save; throws `no-save` otherwise. */
     get(): Promise<Pouch[]>
     /** Requires a loaded save; throws `no-save` otherwise. */
@@ -333,6 +335,7 @@ export function createClient(invoke: Invoke): EngineClient {
     },
     inventory: {
       addBestItems: () => invoke('inventory.addBestItems', []),
+      addHeldItems: () => invoke('inventory.addHeldItems', []),
       get: () => invoke('inventory.get', []),
       setItem: (at, count) => invoke('inventory.setItem', [at, count]),
     },

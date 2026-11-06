@@ -21,6 +21,7 @@ export default function HomePage() {
         <Flex vertical gap={12}>
           <EnhanceAll />
           <AddBestItems />
+          <AddHeldItems />
         </Flex>
       )}
       <AdSlot slot={multiplexAdSlot} format="autorelaxed" />
@@ -138,10 +139,23 @@ function AddBestItems() {
   return (
     <EnhanceButton
       label="Add Best Items"
-      gen4Only={false}
       onEnhance={async () => {
         const count = await engine.inventory.addBestItems()
         return `${count} kinds of item added to your bag.`
+      }}
+    />
+  )
+}
+
+function AddHeldItems() {
+  const engine = useEngine()
+
+  return (
+    <EnhanceButton
+      label="Add Held Items"
+      onEnhance={async () => {
+        const count = await engine.inventory.addHeldItems()
+        return `${count} held items added to your Items pouch.`
       }}
     />
   )

@@ -69,6 +69,30 @@ public class Inventories
         return added;
     }
 
+    // Bright Powder to Razor Fang is the held-item block of the Generation 4 item list. Oval Stone and the three orbs sit among the other Items pouch entries.
+    private static readonly ushort[] HeldItems = [110, 112, 135, 136, .. Enumerable.Range(213, 115).Select(id => (ushort)id)];
+
+    /// <summary>
+    /// Gives one of each item a Pokémon holds, including the ones that make Pokémon evolve, in the Items pouch. Berries, mail and the other pouches aren't touched. Generation 4 only.
+    /// An item the pouch already has keeps its count, and one the pouch has no free slot or support for is skipped.
+    /// </summary>
+    /// <returns>How many items were added.</returns>
+    /// <exception cref="NotSupportedException">The save isn't Generation 4.</exception>
+    public int AddHeldItems()
+    {
+        if (_game.Generation != EntityContext.Gen4) throw new NotSupportedException("Add Held Items only works on Generation 4 saves.");
+
+        var pouch = this["Items"];
+        var added = 0;
+        foreach (var itemId in HeldItems)
+        {
+            if (!pouch.CanSet(itemId) || pouch.AllExceptNone().Any(item => item.Id == itemId)) continue;
+            if (pouch.TrySet(itemId, 1)) added++;
+        }
+
+        return added;
+    }
+
     private ImmutableHashSet<string> GetInventoryTypes()
     {
         try

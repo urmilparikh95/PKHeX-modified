@@ -730,3 +730,4 @@ PKHeX.Facade.Pokemons.Pokemon.Enhance() -> bool
 PKHeX.Facade.Trainer.EnhanceAll() -> int
 PKHeX.Facade.Pokemons.Pokemon.EnhanceMoveset() -> bool
 PKHeX.Facade.Inventories.AddBestItems() -> int
+PKHeX.Facade.Inventories.AddHeldItems() -> int

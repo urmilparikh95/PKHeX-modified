@@ -19,6 +19,24 @@ public static class InventoryHandlers
     [Command("inventory.addBestItems", Topics.Inventory)]
     public static int AddBestItems(Game game) => game.Trainer.Inventories.AddBestItems();
 
+    /// <summary>
+    /// Gives one of each item a Pokémon holds, including the ones that make Pokémon evolve, in the Items pouch. Berries and the other pouches aren't touched. Generation 4 only.
+    /// An item the pouch already has keeps its count, and one with no free slot is skipped. Returns how many items were added. Fails with <c>not-supported</c> outside Generation 4.
+    /// </summary>
+    [Requires(Requirement.Save)]
+    [Command("inventory.addHeldItems", Topics.Inventory)]
+    public static int AddHeldItems(Game game)
+    {
+        try
+        {
+            return game.Trainer.Inventories.AddHeldItems();
+        }
+        catch (NotSupportedException e)
+        {
+            throw new EngineException(ErrorCodes.NotSupported, e.Message, e);
+        }
+    }
+
     [Command("inventory.setItem")]
     public static void SetItem(Session session, Game game, ItemHandle at, int count)
     {
