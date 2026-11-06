@@ -26,8 +26,8 @@ jobs:
         with:
           dotnet-version: 10.0.x
 
-      - name: Test enhance
-        run: dotnet test src/PKHeX.Facade.Tests --filter "FullyQualifiedName~PokemonEnhanceTests" --verbosity normal
+      - name: Test enhance and best items
+        run: dotnet test src/PKHeX.Facade.Tests --filter "FullyQualifiedName~PokemonEnhanceTests|FullyQualifiedName~BestItemsTests" --verbosity normal
 
   build:
     runs-on: ubuntu-latest

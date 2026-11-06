@@ -729,3 +729,4 @@ PKHeX.Facade.PokemonParty.Members() -> System.Collections.Generic.IEnumerable<(i
 PKHeX.Facade.Pokemons.Pokemon.Enhance() -> bool
 PKHeX.Facade.Trainer.EnhanceAll() -> int
 PKHeX.Facade.Pokemons.Pokemon.EnhanceMoveset() -> bool
+PKHeX.Facade.Inventories.AddBestItems() -> int

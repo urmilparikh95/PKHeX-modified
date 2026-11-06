@@ -17,7 +17,12 @@ export default function HomePage() {
   return (
     <Flex vertical gap={20} style={{ width: '100%' }}>
       {game && <TrainerCard />}
-      {game && <EnhanceAll />}
+      {game && (
+        <Flex vertical gap={12}>
+          <EnhanceAll />
+          <AddBestItems />
+        </Flex>
+      )}
       <AdSlot slot={multiplexAdSlot} format="autorelaxed" />
       <QuickActions />
     </Flex>
@@ -122,6 +127,21 @@ function EnhanceAll() {
       onEnhance={async () => {
         const count = await engine.pokemon.enhanceAll()
         return `${count} Pokémon in your party and boxes.`
+      }}
+    />
+  )
+}
+
+function AddBestItems() {
+  const engine = useEngine()
+
+  return (
+    <EnhanceButton
+      label="Add Best Items"
+      gen4Only={false}
+      onEnhance={async () => {
+        const count = await engine.inventory.addBestItems()
+        return `${count} kinds of item added to your bag.`
       }}
     />
   )

@@ -11,6 +11,14 @@ public static class InventoryHandlers
         .Select(inventory => inventory.ToPouch())
         .ToArray();
 
+    /// <summary>
+    /// Gives 995 each of Rare Candy, Master Ball, Max Repel, Full Restore, Max Revive and Full Heal, and 10 of each evolution stone, in the pouch that holds each one.
+    /// A count above what the pouch holds is lowered to it. An item the save has no pouch for, or no free slot for, is skipped. Returns how many kinds of item were set.
+    /// </summary>
+    [Requires(Requirement.Save)]
+    [Command("inventory.addBestItems", Topics.Inventory)]
+    public static int AddBestItems(Game game) => game.Trainer.Inventories.AddBestItems();
+
     [Command("inventory.setItem")]
     public static void SetItem(Session session, Game game, ItemHandle at, int count)
     {

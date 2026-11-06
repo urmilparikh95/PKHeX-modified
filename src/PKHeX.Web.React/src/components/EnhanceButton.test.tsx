@@ -44,6 +44,19 @@ describe('EnhanceButton', () => {
     expect(document.querySelector('button')?.textContent).toContain('Enhance Moveset (Gen 4 only)')
   })
 
+  it('works in any generation when it is not Generation 4 only', () => {
+    loaded.generation = 3
+    render(
+      <App>
+        <EnhanceButton label="Add Best Items" gen4Only={false} onEnhance={async () => ''} />
+      </App>,
+    )
+    const button = document.querySelector('button') as HTMLButtonElement
+
+    expect(button.textContent).toBe('Add Best Items')
+    expect(button.disabled).toBe(false)
+  })
+
   it('is disabled outside Generation 4', () => {
     const onEnhance = vi.fn(async () => '')
     const button = renderButton(5, onEnhance)

@@ -6,21 +6,22 @@ import { useLoadedGame } from '@pkhex-everywhere/react'
 interface EnhanceButtonProps {
   onEnhance: () => Promise<string>
   label?: string
+  gen4Only?: boolean
 }
 
-export function EnhanceButton({ onEnhance, label = 'Enhance PKMN' }: EnhanceButtonProps) {
+export function EnhanceButton({ onEnhance, label = 'Enhance PKMN', gen4Only = true }: EnhanceButtonProps) {
   const { game } = useLoadedGame()
   const { notification } = App.useApp()
   const [busy, setBusy] = useState(false)
-  const supported = game?.generation === 4
+  const supported = !gen4Only || game?.generation === 4
 
   const enhance = async () => {
     setBusy(true)
     try {
-      notification.success({ title: 'Enhanced', description: await onEnhance() })
+      notification.success({ title: 'Done', description: await onEnhance() })
     } catch (error) {
       if (!(error instanceof EngineError)) throw error
-      notification.error({ title: "Couldn't enhance", description: error.message })
+      notification.error({ title: "Couldn't finish", description: error.message })
     } finally {
       setBusy(false)
     }
@@ -28,7 +29,7 @@ export function EnhanceButton({ onEnhance, label = 'Enhance PKMN' }: EnhanceButt
 
   const button = (
     <Button loading={busy} disabled={!supported} onClick={() => void enhance()}>
-      {label} (Gen 4 only)
+      {gen4Only ? `${label} (Gen 4 only)` : label}
     </Button>
   )
   if (supported) return button
