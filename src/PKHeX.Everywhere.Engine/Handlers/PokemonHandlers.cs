@@ -126,6 +126,22 @@ public static class PokemonHandlers
         }
     }
 
+    /// <summary>
+    /// Replaces one Pokémon's moves with those of its species' competitive set, with every PP Up applied and the PP filled to the new maximum. Generation 4 only.
+    /// On the draft it changes the draft, which reaches the save on <c>pokemon.commit</c>. Fails with <c>not-supported</c> outside Generation 4 and for a Pokémon with no set.
+    /// </summary>
+    [Requires(Requirement.Save)]
+    [Command("pokemon.enhanceMoveset")]
+    public static void EnhanceMoveset(Session session, PokemonHandle at)
+    {
+        var slot = session.FindEditable(at);
+        if (!slot.Pokemon.EnhanceMoveset())
+            throw new EngineException(ErrorCodes.NotSupported, "Enhance Moveset only works on Generation 4 Pokémon.");
+
+        slot.Commit(session);
+        session.Raise(new PokemonChanged(at));
+    }
+
     [Command("pokemon.edit", Topics.Draft)]
     public static void Edit(Session session, Game game, PokemonHandle at) =>
         session.Draft = new Draft(game.FindEditableSaved(at).Pokemon.Clone(), at);

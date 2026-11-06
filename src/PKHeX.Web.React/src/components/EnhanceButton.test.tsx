@@ -33,6 +33,17 @@ describe('EnhanceButton', () => {
     expect(renderButton(4, async () => '').textContent).toContain('Enhance PKMN (Gen 4 only)')
   })
 
+  it('takes a label', () => {
+    loaded.generation = 4
+    render(
+      <App>
+        <EnhanceButton label="Enhance Moveset" onEnhance={async () => ''} />
+      </App>,
+    )
+
+    expect(document.querySelector('button')?.textContent).toContain('Enhance Moveset (Gen 4 only)')
+  })
+
   it('is disabled outside Generation 4', () => {
     const onEnhance = vi.fn(async () => '')
     const button = renderButton(5, onEnhance)

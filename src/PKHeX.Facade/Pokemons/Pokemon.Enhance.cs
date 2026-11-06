@@ -26,6 +26,19 @@ public partial class Pokemon
         return changed;
     }
 
+    /// <summary>
+    /// Replaces the moves with the species' competitive set, with every PP Up applied and the PP filled to the new maximum. Generation 4 only.
+    /// </summary>
+    /// <returns>Whether the moves changed: false for an empty or unknown Pokémon, outside Generation 4, and for a species without a set.</returns>
+    public bool EnhanceMoveset()
+    {
+        if (Game.Generation != EntityContext.Gen4 || IsEmpty || !IsEditable) return false;
+        if (CompetitiveSets.For(Species.Id) is not { } set) return false;
+
+        Pkm.SetMoves(set.Moves, maxPP: true);
+        return true;
+    }
+
     private bool TryUpdate(PokemonPatch patch)
     {
         try

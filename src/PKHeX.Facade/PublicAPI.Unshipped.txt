@@ -728,3 +728,4 @@ PKHeX.Facade.Pokemons.ExperienceRange.ExperienceRange(PKHeX.Facade.Pokemons.Expe
 PKHeX.Facade.PokemonParty.Members() -> System.Collections.Generic.IEnumerable<(int Slot, PKHeX.Facade.Pokemons.Pokemon! Pokemon)>!
 PKHeX.Facade.Pokemons.Pokemon.Enhance() -> bool
 PKHeX.Facade.Trainer.EnhanceAll() -> int
+PKHeX.Facade.Pokemons.Pokemon.EnhanceMoveset() -> bool

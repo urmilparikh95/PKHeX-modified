@@ -4,7 +4,7 @@ using PKHeX.Facade.Repositories;
 
 namespace PKHeX.Facade;
 
-internal sealed record CompetitiveSet(int Species, int Nature, int Ability, int HeldItem);
+internal sealed record CompetitiveSet(int Species, int Nature, int Ability, int HeldItem, ushort[] Moves);
 
 internal static class CompetitiveSets
 {
@@ -35,7 +35,8 @@ internal static class CompetitiveSets
             string Cell(string name) => cells[column[name]].Trim();
 
             var species = int.Parse(Cell("number"));
-            sets[species] = new CompetitiveSet(species, NatureId(Cell("nature")), AbilityId(Cell("ability")), ItemId(Cell("held_item")));
+            var moves = new[] { "move1", "move2", "move3", "move4" }.Select(name => MoveId(Cell(name))).ToArray();
+            sets[species] = new CompetitiveSet(species, NatureId(Cell("nature")), AbilityId(Cell("ability")), ItemId(Cell("held_item")), moves);
         }
 
         return sets;
@@ -51,6 +52,15 @@ internal static class CompetitiveSets
             .Select((ability, index) => (ability, index))
             .FirstOrDefault(entry => entry.ability.Equals(name, StringComparison.OrdinalIgnoreCase)).index;
         return id > 0 ? id : throw new InvalidDataException($"Unknown ability '{name}' in {ResourceName}.");
+    }
+
+    private static ushort MoveId(string name)
+    {
+        if (name.Length == 0) return 0;
+        var id = GameInfo.Strings.movelist
+            .Select((move, index) => (move, index))
+            .FirstOrDefault(entry => entry.move.Equals(name, StringComparison.OrdinalIgnoreCase)).index;
+        return id > 0 ? (ushort)id : throw new InvalidDataException($"Unknown move '{name}' in {ResourceName}.");
     }
 
     private static int ItemId(string name)

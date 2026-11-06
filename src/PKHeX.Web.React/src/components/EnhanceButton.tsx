@@ -5,9 +5,10 @@ import { useLoadedGame } from '@pkhex-everywhere/react'
 
 interface EnhanceButtonProps {
   onEnhance: () => Promise<string>
+  label?: string
 }
 
-export function EnhanceButton({ onEnhance }: EnhanceButtonProps) {
+export function EnhanceButton({ onEnhance, label = 'Enhance PKMN' }: EnhanceButtonProps) {
   const { game } = useLoadedGame()
   const { notification } = App.useApp()
   const [busy, setBusy] = useState(false)
@@ -27,7 +28,7 @@ export function EnhanceButton({ onEnhance }: EnhanceButtonProps) {
 
   const button = (
     <Button loading={busy} disabled={!supported} onClick={() => void enhance()}>
-      Enhance PKMN (Gen 4 only)
+      {label} (Gen 4 only)
     </Button>
   )
   if (supported) return button

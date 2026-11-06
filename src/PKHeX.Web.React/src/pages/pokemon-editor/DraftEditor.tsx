@@ -42,6 +42,13 @@ export function DraftEditor({ actions }: DraftEditorProps) {
             return 'Save the Pokémon to keep the changes.'
           }}
         />
+        <EnhanceButton
+          label="Enhance Moveset"
+          onEnhance={async () => {
+            await engine.pokemon.enhanceMoveset(draftHandle)
+            return 'Save the Pokémon to keep the changes.'
+          }}
+        />
       </Flex>
     </Flex>
   )
