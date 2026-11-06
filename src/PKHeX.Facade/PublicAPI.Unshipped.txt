@@ -726,3 +726,5 @@ virtual PKHeX.Facade.Pokemons.ExperienceRange.Equals(PKHeX.Facade.Pokemons.Exper
 virtual PKHeX.Facade.Pokemons.ExperienceRange.PrintMembers(System.Text.StringBuilder! builder) -> bool
 PKHeX.Facade.Pokemons.ExperienceRange.ExperienceRange(PKHeX.Facade.Pokemons.ExperienceRange! original) -> void
 PKHeX.Facade.PokemonParty.Members() -> System.Collections.Generic.IEnumerable<(int Slot, PKHeX.Facade.Pokemons.Pokemon! Pokemon)>!
+PKHeX.Facade.Pokemons.Pokemon.Enhance() -> bool
+PKHeX.Facade.Trainer.EnhanceAll() -> int

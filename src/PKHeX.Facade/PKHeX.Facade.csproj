@@ -29,6 +29,10 @@
 <!--  </ItemGroup>-->
 
   <ItemGroup>
+    <EmbeddedResource Include="..\..\docs\data\gen4_competitive_sets.csv" LogicalName="gen4_competitive_sets.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\..\external\PKHeX-Plugins\PKHeX.Core.AutoMod\PKHeX.Core.AutoMod.csproj" />
   </ItemGroup>
 

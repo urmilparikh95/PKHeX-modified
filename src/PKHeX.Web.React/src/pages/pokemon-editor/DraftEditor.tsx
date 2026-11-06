@@ -1,7 +1,8 @@
 import type { ReactNode } from 'react'
-import { Flex, Tabs } from 'antd'
+import { Flex, Space, Tabs } from 'antd'
 import { draftHandle } from '@pkhex-everywhere/engine'
-import { usePokemon, usePokemonDetails } from '@pkhex-everywhere/react'
+import { useEngine, usePokemon, usePokemonDetails } from '@pkhex-everywhere/react'
+import { EnhanceButton } from '../../components/EnhanceButton'
 import { PageHeader } from '../../components/PageHeader'
 import { PokemonImage } from '../../components/PokemonImage'
 import { DescriptionTab } from './DescriptionTab'
@@ -18,6 +19,7 @@ interface DraftEditorProps {
 export function DraftEditor({ actions }: DraftEditorProps) {
   const { pokemon } = usePokemon(draftHandle)
   const { details } = usePokemonDetails(draftHandle)
+  const engine = useEngine()
 
   return (
     <Flex vertical gap={20}>
@@ -32,7 +34,17 @@ export function DraftEditor({ actions }: DraftEditorProps) {
           { key: 'trainer', label: 'Trainer', children: <TrainerTab /> },
         ]}
       />
-      <Flex justify="end">{actions}</Flex>
+      <Flex justify="end">
+        <Space>
+          <EnhanceButton
+            onEnhance={async () => {
+              await engine.pokemon.enhance(draftHandle)
+              return 'Save the Pokémon to keep the changes.'
+            }}
+          />
+          {actions}
+        </Space>
+      </Flex>
     </Flex>
   )
 }

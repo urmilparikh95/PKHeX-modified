@@ -73,6 +73,25 @@ public class Trainer
         PokemonsChanged?.Invoke(source);
     }
 
+    /// <summary>
+    /// Runs <see cref="Pokemon.Enhance"/> on every Pokémon in the party and the boxes, then writes them to the save.
+    /// </summary>
+    /// <returns>How many Pokémon changed.</returns>
+    /// <exception cref="NotSupportedException">The save isn't Generation 4.</exception>
+    public int EnhanceAll()
+    {
+        if (_game.Generation != EntityContext.Gen4) throw new NotSupportedException("Enhance only works on Generation 4 saves.");
+
+        var party = Party.Members().Select(member => member.Pokemon).Where(pokemon => pokemon.Enhance()).ToList();
+        foreach (var pokemon in party) pokemon.Pkm.ResetPartyStats();
+        var boxed = PokemonBox.Boxed().Select(entry => entry.Pokemon).Count(pokemon => pokemon.Enhance());
+
+        Commit();
+        if (party.Count > 0) PokemonsChanged?.Invoke(PokemonSource.Party);
+        if (boxed > 0) PokemonsChanged?.Invoke(PokemonSource.Box);
+        return party.Count + boxed;
+    }
+
     internal void Commit()
     {
         Party.Commit();

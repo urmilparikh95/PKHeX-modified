@@ -7,7 +7,7 @@ export type Invoke = <T>(call: CallName, args: unknown[]) => Promise<T>
 
 export const queries = ['box.get', 'box.list', 'box.previewFile', 'box.showdown', 'catalog.names', 'encounters.events', 'encounters.search', 'encounters.versions', 'events.flag', 'events.get', 'game.balls', 'game.blankVersions', 'game.formats', 'game.get', 'game.heldItems', 'game.languages', 'game.moves', 'game.natures', 'game.originGames', 'game.progress', 'game.types', 'game.version', 'inventory.get', 'mysteryGift.events', 'mysteryGift.previewEvent', 'mysteryGift.previewFile', 'mysteryGift.status', 'party.get', 'party.showdown', 'plugins.actions', 'plugins.details', 'plugins.failures', 'plugins.installed', 'plugins.isSupported', 'plugins.pageModule', 'plugins.pages', 'plugins.setting', 'plugins.state', 'pokemon.details', 'pokemon.export', 'pokemon.get', 'pokemon.options', 'pokemon.read', 'pokemon.showdown', 'species.list', 'team.get', 'team.list', 'trainer.badges', 'trainer.get', 'transfer.convert', 'transfer.details', 'transfer.export', 'transfer.get', 'transfer.partnerBoxes', 'transfer.preview'] as const
 
-export const commands = ['box.addEncounter', 'box.addFromFile', 'events.giveTickets', 'events.setFlag', 'events.setWork', 'game.close', 'game.enableFormat', 'game.export', 'game.file', 'game.load', 'game.loadBlank', 'inventory.setItem', 'mysteryGift.insertEvent', 'mysteryGift.insertFile', 'mysteryGift.remove', 'mysteryGift.setReceived', 'mysteryGift.setUnlocked', 'plugins.dismissFailure', 'plugins.newestCompatible', 'plugins.register', 'plugins.run', 'plugins.setEnabled', 'plugins.setHookEnabled', 'plugins.unregister', 'plugins.updateSetting', 'pokemon.addToBox', 'pokemon.clone', 'pokemon.commit', 'pokemon.edit', 'pokemon.setLevel', 'pokemon.update', 'team.clear', 'team.place', 'trainer.setBadges', 'trainer.setBattlePoints', 'trainer.setGender', 'trainer.setMoney', 'trainer.setName', 'transfer.close', 'transfer.commit', 'transfer.open'] as const
+export const commands = ['box.addEncounter', 'box.addFromFile', 'events.giveTickets', 'events.setFlag', 'events.setWork', 'game.close', 'game.enableFormat', 'game.export', 'game.file', 'game.load', 'game.loadBlank', 'inventory.setItem', 'mysteryGift.insertEvent', 'mysteryGift.insertFile', 'mysteryGift.remove', 'mysteryGift.setReceived', 'mysteryGift.setUnlocked', 'plugins.dismissFailure', 'plugins.newestCompatible', 'plugins.register', 'plugins.run', 'plugins.setEnabled', 'plugins.setHookEnabled', 'plugins.unregister', 'plugins.updateSetting', 'pokemon.addToBox', 'pokemon.clone', 'pokemon.commit', 'pokemon.edit', 'pokemon.enhance', 'pokemon.enhanceAll', 'pokemon.setLevel', 'pokemon.update', 'team.clear', 'team.place', 'trainer.setBadges', 'trainer.setBattlePoints', 'trainer.setGender', 'trainer.setMoney', 'trainer.setName', 'transfer.close', 'transfer.commit', 'transfer.open'] as const
 
 export type QueryName = (typeof queries)[number]
 
@@ -182,6 +182,10 @@ export interface EngineClient {
     details(at: PokemonHandle): Promise<EditablePokemon>
     /** Requires a loaded save; throws `no-save` otherwise. */
     edit(at: PokemonHandle): Promise<void>
+    /** Sets one Pokémon's IVs to 31 and its EVs to 255, then its nature, ability and held item to those of its species' competitive set. Generation 4 only. The EVs go past the 510 total the games allow, so PKHeX flags the Pokémon as illegal. A part the save can't store is skipped. On the draft it changes the draft, which reaches the save on `pokemon.commit`. Fails with `not-supported` outside Generation 4 and for a Pokémon with no set. Requires a loaded save; throws `no-save` otherwise. */
+    enhance(at: PokemonHandle): Promise<void>
+    /** Runs `pokemon.enhance` on every Pokémon in the party and the boxes, and writes them to the save. Returns how many changed. Fails with `not-supported` outside Generation 4. Requires a loaded save; throws `no-save` otherwise. */
+    enhanceAll(): Promise<number>
     /** Requires a loaded save; throws `no-save` otherwise. */
     export(at: PokemonHandle): Promise<ExportedPokemon>
     /** Requires a loaded save; throws `no-save` otherwise. */
@@ -367,6 +371,8 @@ export function createClient(invoke: Invoke): EngineClient {
       commit: () => invoke('pokemon.commit', []),
       details: (at) => invoke('pokemon.details', [at]),
       edit: (at) => invoke('pokemon.edit', [at]),
+      enhance: (at) => invoke('pokemon.enhance', [at]),
+      enhanceAll: () => invoke('pokemon.enhanceAll', []),
       export: async (at) => withBytes(await invoke<ExportedPokemon>('pokemon.export', [at]), ['bytes']),
       get: (at) => invoke('pokemon.get', [at]),
       options: (at) => invoke('pokemon.options', [at]),

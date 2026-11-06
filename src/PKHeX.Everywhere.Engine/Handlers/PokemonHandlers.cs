@@ -91,6 +91,41 @@ public static class PokemonHandlers
         session.Raise(new PokemonChanged(at));
     }
 
+    /// <summary>
+    /// Sets one Pokémon's IVs to 31 and its EVs to 255, then its nature, ability and held item to those of its species' competitive set. Generation 4 only.
+    /// The EVs go past the 510 total the games allow, so PKHeX flags the Pokémon as illegal. A part the save can't store is skipped.
+    /// On the draft it changes the draft, which reaches the save on <c>pokemon.commit</c>. Fails with <c>not-supported</c> outside Generation 4 and for a Pokémon with no set.
+    /// </summary>
+    [Requires(Requirement.Save)]
+    [Command("pokemon.enhance")]
+    public static void Enhance(Session session, PokemonHandle at)
+    {
+        var slot = session.FindEditable(at);
+        if (!slot.Pokemon.Enhance())
+            throw new EngineException(ErrorCodes.NotSupported, "Enhance only works on Generation 4 Pokémon.");
+
+        slot.Commit(session);
+        session.Raise(new PokemonChanged(at));
+    }
+
+    /// <summary>
+    /// Runs <c>pokemon.enhance</c> on every Pokémon in the party and the boxes, and writes them to the save. Returns how many changed.
+    /// Fails with <c>not-supported</c> outside Generation 4.
+    /// </summary>
+    [Requires(Requirement.Save)]
+    [Command("pokemon.enhanceAll", Topics.Party, Topics.Box)]
+    public static int EnhanceAll(Game game)
+    {
+        try
+        {
+            return game.Trainer.EnhanceAll();
+        }
+        catch (NotSupportedException e)
+        {
+            throw new EngineException(ErrorCodes.NotSupported, e.Message, e);
+        }
+    }
+
     [Command("pokemon.edit", Topics.Draft)]
     public static void Edit(Session session, Game game, PokemonHandle at) =>
         session.Draft = new Draft(game.FindEditableSaved(at).Pokemon.Clone(), at);

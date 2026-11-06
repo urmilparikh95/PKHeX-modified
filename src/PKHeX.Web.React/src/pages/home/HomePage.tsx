@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { App, Descriptions, Flex, Input, InputNumber, Space, Typography } from 'antd'
 import { EngineError } from '@pkhex-everywhere/engine'
-import { useLoadedGame, useQuery, useTrainer } from '@pkhex-everywhere/react'
+import { useEngine, useLoadedGame, useQuery, useTrainer } from '@pkhex-everywhere/react'
 import { AdSlot } from '../../components/AdSlot'
+import { EnhanceButton } from '../../components/EnhanceButton'
 import { PlugInActionButton } from '../../components/PlugInActionButton'
 import { TrainerGenderRadio } from '../../components/TrainerGenderRadio'
 
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <Flex vertical gap={20} style={{ width: '100%' }}>
       {game && <TrainerCard />}
+      {game && <EnhanceAll />}
       <AdSlot slot={multiplexAdSlot} format="autorelaxed" />
       <QuickActions />
     </Flex>
@@ -108,6 +110,19 @@ function TrainerCard() {
             ]),
         { key: 'rival', label: 'Rival', children: trainer.rival },
       ]}
+    />
+  )
+}
+
+function EnhanceAll() {
+  const engine = useEngine()
+
+  return (
+    <EnhanceButton
+      onEnhance={async () => {
+        const count = await engine.pokemon.enhanceAll()
+        return `${count} Pokémon in your party and boxes.`
+      }}
     />
   )
 }
