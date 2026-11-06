@@ -1,0 +1,494 @@
+number,name,nature,move1,move2,move3,move4,held_item,ability
+1,Bulbasaur,Jolly,Swords Dance,Power Whip,Earthquake,Double-Edge,Black Sludge,Overgrow
+2,Ivysaur,Jolly,Swords Dance,Power Whip,Earthquake,Double-Edge,Black Sludge,Overgrow
+3,Venusaur,Jolly,Swords Dance,Power Whip,Earthquake,Double-Edge,Black Sludge,Overgrow
+4,Charmander,Jolly,Swords Dance,Fire Punch,Earthquake,Dragon Claw,Life Orb,Blaze
+5,Charmeleon,Jolly,Swords Dance,Fire Punch,Earthquake,Dragon Claw,Life Orb,Blaze
+6,Charizard,Jolly,Swords Dance,Fire Punch,Earthquake,Dragon Claw,Life Orb,Blaze
+7,Squirtle,Bold,Rapid Spin,Surf,Ice Beam,Roar,Leftovers,Torrent
+8,Wartortle,Bold,Rapid Spin,Surf,Ice Beam,Roar,Leftovers,Torrent
+9,Blastoise,Bold,Rapid Spin,Surf,Ice Beam,Roar,Leftovers,Torrent
+10,Caterpie,Timid,Bug Buzz,Psychic,Giga Drain,Signal Beam,Choice Scarf,Compound Eyes
+11,Metapod,Timid,Bug Buzz,Psychic,Giga Drain,Signal Beam,Choice Scarf,Compound Eyes
+12,Butterfree,Timid,Bug Buzz,Psychic,Giga Drain,Signal Beam,Choice Scarf,Compound Eyes
+13,Weedle,Careful,Toxic Spikes,Poison Jab,U-turn,Roost,Black Sludge,Swarm
+14,Kakuna,Careful,Toxic Spikes,Poison Jab,U-turn,Roost,Black Sludge,Swarm
+15,Beedrill,Careful,Toxic Spikes,Poison Jab,U-turn,Roost,Black Sludge,Swarm
+16,Pidgey,Jolly,Brave Bird,Return,U-turn,Pursuit,Choice Band,Tangled Feet
+17,Pidgeotto,Jolly,Brave Bird,Return,U-turn,Pursuit,Choice Band,Tangled Feet
+18,Pidgeot,Jolly,Brave Bird,Return,U-turn,Pursuit,Choice Band,Tangled Feet
+19,Rattata,Jolly,Protect,Facade,Crunch,Sucker Punch,Flame Orb,Guts
+20,Raticate,Jolly,Protect,Facade,Crunch,Sucker Punch,Flame Orb,Guts
+21,Spearow,Jolly,Return,Drill Peck,U-turn,Pursuit,Choice Band,Keen Eye
+22,Fearow,Jolly,Return,Drill Peck,U-turn,Pursuit,Choice Band,Keen Eye
+23,Ekans,Jolly,Switcheroo,Earthquake,Seed Bomb,Gunk Shot,Black Sludge,Intimidate
+24,Arbok,Jolly,Switcheroo,Earthquake,Seed Bomb,Gunk Shot,Black Sludge,Intimidate
+25,Pikachu,Timid,Thunderbolt,Nasty Plot,Encore,Focus Blast,Life Orb,Static
+26,Raichu,Timid,Thunderbolt,Nasty Plot,Encore,Focus Blast,Life Orb,Static
+27,Sandshrew,Impish,Earthquake,Shadow Claw,Stealth Rock,Rapid Spin,Leftovers,Sand Veil
+28,Sandslash,Impish,Earthquake,Shadow Claw,Stealth Rock,Rapid Spin,Leftovers,Sand Veil
+29,Nidoran♀,Relaxed,Toxic Spikes,Protect,Earthquake,Ice Beam,Black Sludge,Poison Point
+30,Nidorina,Relaxed,Toxic Spikes,Protect,Earthquake,Ice Beam,Black Sludge,Poison Point
+31,Nidoqueen,Relaxed,Toxic Spikes,Protect,Earthquake,Ice Beam,Black Sludge,Poison Point
+32,Nidoran♂,Jolly,Earthquake,Megahorn,Toxic Spikes,Sucker Punch,Black Sludge,Poison Point
+33,Nidorino,Jolly,Earthquake,Megahorn,Toxic Spikes,Sucker Punch,Black Sludge,Poison Point
+34,Nidoking,Jolly,Earthquake,Megahorn,Toxic Spikes,Sucker Punch,Black Sludge,Poison Point
+35,Clefairy,Careful,Soft-Boiled,Seismic Toss,Knock Off,Thunder Wave,Leftovers,Magic Guard
+36,Clefable,Careful,Soft-Boiled,Seismic Toss,Knock Off,Thunder Wave,Leftovers,Magic Guard
+37,Vulpix,Timid,Energy Ball,Will-O-Wisp,Fire Blast,Disable,Life Orb,Flash Fire
+38,Ninetales,Timid,Energy Ball,Will-O-Wisp,Fire Blast,Disable,Life Orb,Flash Fire
+39,Jigglypuff,Calm,Wish,Protect,Heal Bell,Seismic Toss,Leftovers,Cute Charm
+40,Wigglytuff,Calm,Wish,Protect,Heal Bell,Seismic Toss,Leftovers,Cute Charm
+41,Zubat,Timid,Roost,Taunt,Air Slash,Nasty Plot,Leftovers,Inner Focus
+42,Golbat,Timid,Roost,Taunt,Air Slash,Nasty Plot,Leftovers,Inner Focus
+43,Oddish,Modest,Energy Ball,Sleep Powder,Sludge Bomb,Moonlight,Black Sludge,Chlorophyll
+44,Gloom,Modest,Energy Ball,Sleep Powder,Sludge Bomb,Moonlight,Black Sludge,Chlorophyll
+45,Vileplume,Modest,Energy Ball,Sleep Powder,Sludge Bomb,Moonlight,Black Sludge,Chlorophyll
+46,Paras,Careful,Spore,Stun Spore,Synthesis,Seed Bomb,Leftovers,Dry Skin
+47,Parasect,Careful,Spore,Stun Spore,Synthesis,Seed Bomb,Leftovers,Dry Skin
+48,Venonat,Modest,Bug Buzz,Sludge Bomb,Stun Spore,Toxic Spikes,Black Sludge,Tinted Lens
+49,Venomoth,Modest,Bug Buzz,Sludge Bomb,Stun Spore,Toxic Spikes,Black Sludge,Tinted Lens
+50,Diglett,Jolly,Earthquake,Sucker Punch,Stone Edge,Substitute,Life Orb,Arena Trap
+51,Dugtrio,Jolly,Earthquake,Sucker Punch,Stone Edge,Substitute,Life Orb,Arena Trap
+52,Meowth,Jolly,U-turn,Return,Switcheroo,Night Slash,Leftovers,Limber
+53,Persian,Jolly,U-turn,Return,Switcheroo,Night Slash,Leftovers,Limber
+54,Psyduck,Modest,Hydro Pump,Calm Mind,Encore,Ice Beam,Leftovers,Damp
+55,Golduck,Modest,Hydro Pump,Calm Mind,Encore,Ice Beam,Leftovers,Damp
+56,Mankey,Adamant,Close Combat,U-turn,Ice Punch,Seed Bomb,Choice Scarf,Vital Spirit
+57,Primeape,Adamant,Close Combat,U-turn,Ice Punch,Seed Bomb,Choice Scarf,Vital Spirit
+58,Growlithe,Jolly,Extreme Speed,Flare Blitz,Will-O-Wisp,Morning Sun,Leftovers,Intimidate
+59,Arcanine,Jolly,Extreme Speed,Flare Blitz,Will-O-Wisp,Morning Sun,Leftovers,Intimidate
+60,Poliwag,Adamant,Waterfall,Substitute,Focus Punch,Encore,Leftovers,Water Absorb
+61,Poliwhirl,Adamant,Waterfall,Substitute,Focus Punch,Encore,Leftovers,Water Absorb
+62,Poliwrath,Adamant,Waterfall,Substitute,Focus Punch,Encore,Leftovers,Water Absorb
+63,Abra,Timid,Psychic,Focus Blast,Shadow Ball,Signal Beam,Expert Belt,Synchronize
+64,Kadabra,Timid,Psychic,Focus Blast,Shadow Ball,Signal Beam,Expert Belt,Synchronize
+65,Alakazam,Timid,Psychic,Focus Blast,Shadow Ball,Signal Beam,Expert Belt,Synchronize
+66,Machop,Adamant,Dynamic Punch,Payback,Bullet Punch,Stone Edge,Life Orb,No Guard
+67,Machoke,Adamant,Dynamic Punch,Payback,Bullet Punch,Stone Edge,Life Orb,No Guard
+68,Machamp,Adamant,Dynamic Punch,Payback,Bullet Punch,Stone Edge,Life Orb,No Guard
+69,Bellsprout,Jolly,Swords Dance,Leaf Blade,Sucker Punch,Return,Life Orb,Chlorophyll
+70,Weepinbell,Jolly,Swords Dance,Leaf Blade,Sucker Punch,Return,Life Orb,Chlorophyll
+71,Victreebel,Jolly,Swords Dance,Leaf Blade,Sucker Punch,Return,Life Orb,Chlorophyll
+72,Tentacool,Calm,Toxic Spikes,Surf,Sludge Bomb,Ice Beam,Black Sludge,Liquid Ooze
+73,Tentacruel,Calm,Toxic Spikes,Surf,Sludge Bomb,Ice Beam,Black Sludge,Liquid Ooze
+74,Geodude,Adamant,Explosion,Earthquake,Stone Edge,Sucker Punch,Life Orb,Rock Head
+75,Graveler,Adamant,Explosion,Earthquake,Stone Edge,Sucker Punch,Life Orb,Rock Head
+76,Golem,Adamant,Explosion,Earthquake,Stone Edge,Sucker Punch,Life Orb,Rock Head
+77,Ponyta,Jolly,Substitute,Toxic,Morning Sun,Flare Blitz,Leftovers,Flash Fire
+78,Rapidash,Jolly,Substitute,Toxic,Morning Sun,Flare Blitz,Leftovers,Flash Fire
+79,Slowpoke,Quiet,Surf,Trick Room,Flamethrower,Grass Knot,Leftovers,Own Tempo
+80,Slowbro,Quiet,Surf,Trick Room,Flamethrower,Grass Knot,Leftovers,Own Tempo
+81,Magnemite,Timid,Thunderbolt,Flash Cannon,Explosion,Thunder,Choice Scarf,Magnet Pull
+82,Magneton,Timid,Thunderbolt,Flash Cannon,Explosion,Thunder,Choice Scarf,Magnet Pull
+83,Farfetch’d,Adamant,Knock Off,Toxic,U-turn,Return,Stick,Keen Eye
+84,Doduo,Jolly,Brave Bird,Endeavor,Taunt,Quick Attack,Leftovers,Early Bird
+85,Dodrio,Jolly,Brave Bird,Endeavor,Taunt,Quick Attack,Leftovers,Early Bird
+86,Seel,Sassy,Rain Dance,Rest,Ice Beam,Surf,Leftovers,Hydration
+87,Dewgong,Sassy,Rain Dance,Rest,Ice Beam,Surf,Leftovers,Hydration
+88,Grimer,Careful,Brick Break,Curse,Explosion,Poison Jab,Black Sludge,Sticky Hold
+89,Muk,Careful,Brick Break,Curse,Explosion,Poison Jab,Black Sludge,Sticky Hold
+90,Shellder,Impish,Spikes,Rapid Spin,Toxic Spikes,Rock Blast,Leftovers,Shell Armor
+91,Cloyster,Impish,Spikes,Rapid Spin,Toxic Spikes,Rock Blast,Leftovers,Shell Armor
+92,Gastly,Timid,Shadow Ball,Focus Blast,Substitute,Will-O-Wisp,Life Orb,Levitate
+93,Haunter,Timid,Shadow Ball,Focus Blast,Substitute,Will-O-Wisp,Life Orb,Levitate
+94,Gengar,Timid,Shadow Ball,Focus Blast,Substitute,Will-O-Wisp,Life Orb,Levitate
+95,Onix,Careful,Earthquake,Stealth Rock,Explosion,Gyro Ball,Leftovers,Rock Head
+96,Drowzee,Calm,Psychic,Toxic,Wish,Protect,Leftovers,Insomnia
+97,Hypno,Calm,Psychic,Toxic,Wish,Protect,Leftovers,Insomnia
+98,Krabby,Careful,Crabhammer,Metal Claw,Iron Defense,Amnesia,Leftovers,Hyper Cutter
+99,Kingler,Careful,Crabhammer,Metal Claw,Iron Defense,Amnesia,Leftovers,Hyper Cutter
+100,Voltorb,Timid,Taunt,Rain Dance,Thunder,Thunder Wave,Damp Rock,Static
+101,Electrode,Timid,Taunt,Rain Dance,Thunder,Thunder Wave,Damp Rock,Static
+102,Exeggcute,Modest,Psychic,Solar Beam,Sunny Day,Sleep Powder,Life Orb,Chlorophyll
+103,Exeggutor,Modest,Psychic,Solar Beam,Sunny Day,Sleep Powder,Life Orb,Chlorophyll
+104,Cubone,Adamant,Earthquake,Fire Punch,Double-Edge,Outrage,Thick Club,Rock Head
+105,Marowak,Adamant,Earthquake,Fire Punch,Double-Edge,Outrage,Thick Club,Rock Head
+106,Hitmonlee,Jolly,Close Combat,Sucker Punch,Earthquake,Blaze Kick,Life Orb,Limber
+107,Hitmonchan,Adamant,Ice Punch,Close Combat,Thunder Punch,Mach Punch,Choice Scarf,Iron Fist
+108,Lickitung,Brave,Earthquake,Explosion,Power Whip,Wish,Leftovers,Own Tempo
+109,Koffing,Sassy,Will-O-Wisp,Flamethrower,Protect,Explosion,Black Sludge,Levitate
+110,Weezing,Sassy,Will-O-Wisp,Flamethrower,Protect,Explosion,Black Sludge,Levitate
+111,Rhyhorn,Adamant,Earthquake,Stone Edge,Ice Punch,Swords Dance,Leftovers,Solid Rock
+112,Rhydon,Adamant,Earthquake,Stone Edge,Ice Punch,Swords Dance,Leftovers,Solid Rock
+113,Chansey,Bold,Soft-Boiled,Thunder Wave,Stealth Rock,Ice Beam,Leftovers,Natural Cure
+114,Tangela,Calm,Leech Seed,Leaf Storm,Protect,Synthesis,Life Orb,Chlorophyll
+115,Kangaskhan,Jolly,Sucker Punch,Earthquake,Low Kick,Fake Out,Life Orb,Scrappy
+116,Horsea,Modest,Hydro Pump,Draco Meteor,Rain Dance,Substitute,Life Orb,Swift Swim
+117,Seadra,Modest,Hydro Pump,Draco Meteor,Rain Dance,Substitute,Life Orb,Swift Swim
+118,Goldeen,Adamant,Waterfall,Megahorn,Return,Aqua Tail,Life Orb,Swift Swim
+119,Seaking,Adamant,Waterfall,Megahorn,Return,Aqua Tail,Life Orb,Swift Swim
+120,Staryu,Timid,Hydro Pump,Thunderbolt,Ice Beam,Recover,Leftovers,Natural Cure
+121,Starmie,Timid,Hydro Pump,Thunderbolt,Ice Beam,Recover,Leftovers,Natural Cure
+122,Mr. Mime,Timid,Psychic,Hyper Beam,Focus Blast,Thunderbolt,Leftovers,Soundproof
+123,Scyther,Adamant,Bullet Punch,Superpower,U-turn,Pursuit,Choice Band,Technician
+124,Jynx,Timid,Focus Blast,Blizzard,Psychic,Shadow Ball,Choice Scarf,Forewarn
+125,Electabuzz,Jolly,Ice Punch,Thunder Punch,Earthquake,Cross Chop,Expert Belt,Motor Drive
+126,Magmar,Modest,Thunderbolt,Fire Blast,Focus Blast,Flamethrower,Expert Belt,Flame Body
+127,Pinsir,Jolly,X-Scissor,Close Combat,Stealth Rock,Rock Tomb,Life Orb,Hyper Cutter
+128,Tauros,Jolly,Earthquake,Body Slam,Substitute,Stone Edge,Silk Scarf,Intimidate
+129,Magikarp,Adamant,Waterfall,Dragon Dance,Earthquake,Ice Fang,Leftovers,Intimidate
+130,Gyarados,Adamant,Waterfall,Dragon Dance,Earthquake,Ice Fang,Leftovers,Intimidate
+131,Lapras,Timid,Ice Beam,Surf,Thunder,Rain Dance,Leftovers,Water Absorb
+132,Ditto,Timid,Transform,,,,Leftovers,Limber
+133,Eevee,Timid,Thunderbolt,Baton Pass,Shadow Ball,Substitute,Leftovers,Volt Absorb
+134,Vaporeon,Calm,Wish,Surf,Protect,Toxic,Leftovers,Water Absorb
+135,Jolteon,Timid,Thunderbolt,Baton Pass,Shadow Ball,Substitute,Leftovers,Volt Absorb
+136,Flareon,Calm,Wish,Protect,Flamethrower,Toxic,Leftovers,Flash Fire
+137,Porygon,Modest,Ice Beam,Tri Attack,Thunderbolt,Dark Pulse,Choice Specs,Download
+138,Omanyte,Modest,Ice Beam,Surf,Earth Power,Hydro Pump,Choice Specs,Swift Swim
+139,Omastar,Modest,Ice Beam,Surf,Earth Power,Hydro Pump,Choice Specs,Swift Swim
+140,Kabuto,Adamant,Stone Edge,Waterfall,Swords Dance,Rain Dance,Life Orb,Swift Swim
+141,Kabutops,Adamant,Stone Edge,Waterfall,Swords Dance,Rain Dance,Life Orb,Swift Swim
+142,Aerodactyl,Jolly,Earthquake,Stealth Rock,Taunt,Stone Edge,Life Orb,Pressure
+143,Snorlax,Adamant,Crunch,Self-Destruct,Curse,Earthquake,Leftovers,Thick Fat
+144,Articuno,Calm,Ice Beam,Toxic,Heal Bell,Roost,Leftovers,Pressure
+145,Zapdos,Bold,Thunderbolt,Roost,Heat Wave,Toxic,Leftovers,Pressure
+146,Moltres,Bold,Roost,Flamethrower,Substitute,Will-O-Wisp,Leftovers,Pressure
+147,Dratini,Adamant,Extreme Speed,Outrage,Dragon Dance,Fire Punch,Life Orb,Inner Focus
+148,Dragonair,Adamant,Extreme Speed,Outrage,Dragon Dance,Fire Punch,Life Orb,Inner Focus
+149,Dragonite,Adamant,Extreme Speed,Outrage,Dragon Dance,Fire Punch,Life Orb,Inner Focus
+150,Mewtwo,Timid,Ice Beam,Aura Sphere,Recover,Fire Blast,Leftovers,Pressure
+151,Mew,Calm,Rock Polish,Nasty Plot,Taunt,Baton Pass,Leftovers,Synchronize
+152,Chikorita,Adamant,Seed Bomb,Earthquake,Outrage,Body Slam,Choice Scarf,Overgrow
+153,Bayleef,Adamant,Seed Bomb,Earthquake,Outrage,Body Slam,Choice Scarf,Overgrow
+154,Meganium,Adamant,Seed Bomb,Earthquake,Outrage,Body Slam,Choice Scarf,Overgrow
+155,Cyndaquil,Timid,Eruption,Focus Blast,Flamethrower,Extrasensory,Choice Scarf,Blaze
+156,Quilava,Timid,Eruption,Focus Blast,Flamethrower,Extrasensory,Choice Scarf,Blaze
+157,Typhlosion,Timid,Eruption,Focus Blast,Flamethrower,Extrasensory,Choice Scarf,Blaze
+158,Totodile,Adamant,Waterfall,Swords Dance,Return,Ice Punch,Life Orb,Torrent
+159,Croconaw,Adamant,Waterfall,Swords Dance,Return,Ice Punch,Life Orb,Torrent
+160,Feraligatr,Adamant,Waterfall,Swords Dance,Return,Ice Punch,Life Orb,Torrent
+161,Sentret,Jolly,Return,Brick Break,U-turn,Shadow Claw,Choice Band,Keen Eye
+162,Furret,Jolly,Return,Brick Break,U-turn,Shadow Claw,Choice Band,Keen Eye
+163,Hoothoot,Calm,Whirlwind,Roost,Night Shade,Toxic,Leftovers,Insomnia
+164,Noctowl,Calm,Whirlwind,Roost,Night Shade,Toxic,Leftovers,Insomnia
+165,Ledyba,Jolly,Agility,Swords Dance,Baton Pass,Encore,Leftovers,Early Bird
+166,Ledian,Jolly,Agility,Swords Dance,Baton Pass,Encore,Leftovers,Early Bird
+167,Spinarak,Jolly,Baton Pass,Spider Web,Agility,Bug Bite,Leftovers,Insomnia
+168,Ariados,Jolly,Baton Pass,Spider Web,Agility,Bug Bite,Leftovers,Insomnia
+169,Crobat,Timid,Roost,Taunt,Air Slash,Nasty Plot,Leftovers,Inner Focus
+170,Chinchou,Modest,Surf,Thunder Wave,Ice Beam,Substitute,Leftovers,Volt Absorb
+171,Lanturn,Modest,Surf,Thunder Wave,Ice Beam,Substitute,Leftovers,Volt Absorb
+172,Pichu,Timid,Thunderbolt,Nasty Plot,Encore,Focus Blast,Life Orb,Static
+173,Cleffa,Careful,Soft-Boiled,Seismic Toss,Knock Off,Thunder Wave,Leftovers,Magic Guard
+174,Igglybuff,Calm,Wish,Protect,Heal Bell,Seismic Toss,Leftovers,Cute Charm
+175,Togepi,Calm,Air Slash,Thunder Wave,Aura Sphere,Nasty Plot,Leftovers,Serene Grace
+176,Togetic,Calm,Air Slash,Thunder Wave,Aura Sphere,Nasty Plot,Leftovers,Serene Grace
+177,Natu,Timid,Psychic,Heat Wave,U-turn,Shadow Ball,Choice Scarf,Synchronize
+178,Xatu,Timid,Psychic,Heat Wave,U-turn,Shadow Ball,Choice Scarf,Synchronize
+179,Mareep,Modest,Discharge,Heal Bell,Reflect,Light Screen,Leftovers,Static
+180,Flaaffy,Modest,Discharge,Heal Bell,Reflect,Light Screen,Leftovers,Static
+181,Ampharos,Modest,Discharge,Heal Bell,Reflect,Light Screen,Leftovers,Static
+182,Bellossom,Careful,Leaf Blade,Sleep Powder,Leech Seed,Synthesis,Leftovers,Chlorophyll
+183,Marill,Adamant,Aqua Jet,Superpower,Ice Punch,Return,Choice Band,Huge Power
+184,Azumarill,Adamant,Aqua Jet,Superpower,Ice Punch,Return,Choice Band,Huge Power
+185,Sudowoodo,Adamant,Stone Edge,Wood Hammer,Low Kick,Explosion,Choice Band,Rock Head
+186,Politoed,Modest,Ice Beam,Toxic,Encore,Surf,Leftovers,Water Absorb
+187,Hoppip,Timid,Encore,Leech Seed,Stun Spore,Substitute,Leftovers,Chlorophyll
+188,Skiploom,Timid,Encore,Leech Seed,Stun Spore,Substitute,Leftovers,Chlorophyll
+189,Jumpluff,Timid,Encore,Leech Seed,Stun Spore,Substitute,Leftovers,Chlorophyll
+190,Aipom,Jolly,Fake Out,U-turn,Low Kick,Pursuit,Silk Scarf,Technician
+191,Sunkern,Modest,Solar Beam,Earth Power,Sunny Day,Grass Knot,Life Orb,Chlorophyll
+192,Sunflora,Modest,Solar Beam,Earth Power,Sunny Day,Grass Knot,Life Orb,Chlorophyll
+193,Yanma,Modest,Bug Buzz,Air Slash,Protect,Detect,Life Orb,Speed Boost
+194,Wooper,Careful,Recover,Earthquake,Curse,Ice Punch,Leftovers,Water Absorb
+195,Quagsire,Careful,Recover,Earthquake,Curse,Ice Punch,Leftovers,Water Absorb
+196,Espeon,Timid,Psychic,Shadow Ball,Calm Mind,Grass Knot,Life Orb,Synchronize
+197,Umbreon,Careful,Protect,Wish,Curse,Payback,Leftovers,Synchronize
+198,Murkrow,Adamant,Superpower,Sucker Punch,Brave Bird,Roost,Life Orb,Super Luck
+199,Slowking,Quiet,Surf,Trick Room,Slack Off,Ice Beam,Leftovers,Oblivious
+200,Misdreavus,Timid,Shadow Ball,Nasty Plot,Will-O-Wisp,Substitute,Leftovers,Levitate
+201,Unown,Modest,Hidden Power,,,,Choice Specs,Levitate
+202,Wobbuffet,Calm,Encore,Mirror Coat,Safeguard,Counter,Leftovers,Shadow Tag
+203,Girafarig,Modest,Psychic,Signal Beam,Trick,Thunderbolt,Life Orb,Inner Focus
+204,Pineco,Careful,Rapid Spin,Spikes,Payback,Stealth Rock,Leftovers,Sturdy
+205,Forretress,Careful,Rapid Spin,Spikes,Payback,Stealth Rock,Leftovers,Sturdy
+206,Dunsparce,Careful,Body Slam,Roost,Earthquake,Stealth Rock,Leftovers,Serene Grace
+207,Gligar,Jolly,Earthquake,Roost,Ice Fang,Taunt,Leftovers,Hyper Cutter
+208,Steelix,Careful,Earthquake,Stealth Rock,Explosion,Gyro Ball,Leftovers,Rock Head
+209,Snubbull,Adamant,Substitute,Return,Close Combat,Fire Punch,Leftovers,Intimidate
+210,Granbull,Adamant,Substitute,Return,Close Combat,Fire Punch,Leftovers,Intimidate
+211,Qwilfish,Adamant,Explosion,Waterfall,Poison Jab,Swords Dance,Life Orb,Swift Swim
+212,Scizor,Adamant,Bullet Punch,Superpower,U-turn,Pursuit,Choice Band,Technician
+213,Shuckle,Impish,Encore,Toxic,Rest,Knock Off,Leftovers,Sturdy
+214,Heracross,Jolly,Close Combat,Megahorn,Stone Edge,Night Slash,Choice Scarf,Guts
+215,Sneasel,Jolly,Ice Shard,Low Kick,Night Slash,Swords Dance,Life Orb,Pressure
+216,Teddiursa,Jolly,Close Combat,Crunch,Facade,Swords Dance,Toxic Orb,Quick Feet
+217,Ursaring,Jolly,Close Combat,Crunch,Facade,Swords Dance,Toxic Orb,Quick Feet
+218,Slugma,Calm,Lava Plume,Recover,Toxic,Acid Armor,Leftovers,Flame Body
+219,Magcargo,Calm,Lava Plume,Recover,Toxic,Acid Armor,Leftovers,Flame Body
+220,Swinub,Jolly,Earthquake,Ice Shard,Substitute,Superpower,Life Orb,Oblivious
+221,Piloswine,Jolly,Earthquake,Ice Shard,Substitute,Superpower,Life Orb,Oblivious
+222,Corsola,Bold,Recover,Toxic,Surf,Stealth Rock,Leftovers,Natural Cure
+223,Remoraid,Quiet,Energy Ball,Ice Beam,Water Spout,Fire Blast,Choice Specs,Suction Cups
+224,Octillery,Quiet,Energy Ball,Ice Beam,Water Spout,Fire Blast,Choice Specs,Suction Cups
+225,Delibird,Jolly,Aerial Ace,Focus Punch,Ice Shard,Seed Bomb,Choice Band,Hustle
+226,Mantine,Modest,Rain Dance,Surf,Ice Beam,Protect,Life Orb,Swift Swim
+227,Skarmory,Impish,Spikes,Roost,Whirlwind,Brave Bird,Leftovers,Keen Eye
+228,Houndour,Timid,Dark Pulse,Overheat,Fire Blast,Sludge Bomb,Choice Scarf,Flash Fire
+229,Houndoom,Timid,Dark Pulse,Overheat,Fire Blast,Sludge Bomb,Choice Scarf,Flash Fire
+230,Kingdra,Modest,Hydro Pump,Draco Meteor,Rain Dance,Substitute,Life Orb,Swift Swim
+231,Phanpy,Impish,Earthquake,Rapid Spin,Ice Shard,Stealth Rock,Leftovers,Sturdy
+232,Donphan,Impish,Earthquake,Rapid Spin,Ice Shard,Stealth Rock,Leftovers,Sturdy
+233,Porygon2,Modest,Ice Beam,Tri Attack,Thunderbolt,Dark Pulse,Choice Specs,Download
+234,Stantler,Jolly,Return,Earthquake,Sucker Punch,Megahorn,Life Orb,Intimidate
+235,Smeargle,Jolly,U-turn,Endeavor,Ice Shard,Counter,Choice Scarf,Own Tempo
+236,Tyrogue,Adamant,Close Combat,Rapid Spin,Sucker Punch,Stone Edge,Leftovers,Intimidate
+237,Hitmontop,Adamant,Close Combat,Rapid Spin,Sucker Punch,Stone Edge,Leftovers,Intimidate
+238,Smoochum,Timid,Focus Blast,Blizzard,Psychic,Shadow Ball,Choice Scarf,Forewarn
+239,Elekid,Jolly,Ice Punch,Thunder Punch,Earthquake,Cross Chop,Expert Belt,Motor Drive
+240,Magby,Modest,Thunderbolt,Fire Blast,Focus Blast,Flamethrower,Expert Belt,Flame Body
+241,Miltank,Relaxed,Body Slam,Milk Drink,Heal Bell,Curse,Leftovers,Scrappy
+242,Blissey,Bold,Soft-Boiled,Thunder Wave,Stealth Rock,Ice Beam,Leftovers,Natural Cure
+243,Raikou,Timid,Thunderbolt,Calm Mind,Protect,Aura Sphere,Leftovers,Pressure
+244,Entei,Adamant,Extreme Speed,Flare Blitz,Stone Edge,Iron Head,Life Orb,Pressure
+245,Suicune,Timid,Calm Mind,Ice Beam,Hydro Pump,Protect,Leftovers,Pressure
+246,Larvitar,Jolly,Crunch,Superpower,Stone Edge,Earthquake,Choice Band,Sand Stream
+247,Pupitar,Jolly,Crunch,Superpower,Stone Edge,Earthquake,Choice Band,Sand Stream
+248,Tyranitar,Jolly,Crunch,Superpower,Stone Edge,Earthquake,Choice Band,Sand Stream
+249,Lugia,Timid,Roost,Reflect,Whirlwind,Ice Beam,Leftovers,Pressure
+250,Ho-Oh,Adamant,Sacred Fire,Brave Bird,Earthquake,Facade,Choice Band,Pressure
+251,Celebi,Bold,Recover,Grass Knot,Thunder Wave,Stealth Rock,Leftovers,Natural Cure
+252,Treecko,Timid,Leaf Storm,Focus Blast,Synthesis,Dragon Pulse,Life Orb,Overgrow
+253,Grovyle,Timid,Leaf Storm,Focus Blast,Synthesis,Dragon Pulse,Life Orb,Overgrow
+254,Sceptile,Timid,Leaf Storm,Focus Blast,Synthesis,Dragon Pulse,Life Orb,Overgrow
+255,Torchic,Timid,Vacuum Wave,Fire Blast,Overheat,Agility,Life Orb,Blaze
+256,Combusken,Timid,Vacuum Wave,Fire Blast,Overheat,Agility,Life Orb,Blaze
+257,Blaziken,Timid,Vacuum Wave,Fire Blast,Overheat,Agility,Life Orb,Blaze
+258,Mudkip,Adamant,Earthquake,Stealth Rock,Waterfall,Ice Punch,Leftovers,Torrent
+259,Marshtomp,Adamant,Earthquake,Stealth Rock,Waterfall,Ice Punch,Leftovers,Torrent
+260,Swampert,Adamant,Earthquake,Stealth Rock,Waterfall,Ice Punch,Leftovers,Torrent
+261,Poochyena,Adamant,Taunt,Super Fang,Crunch,Toxic,Leftovers,Intimidate
+262,Mightyena,Adamant,Taunt,Super Fang,Crunch,Toxic,Leftovers,Intimidate
+263,Zigzagoon,Jolly,Belly Drum,Seed Bomb,Extreme Speed,Shadow Claw,Leftovers,Gluttony
+264,Linoone,Jolly,Belly Drum,Seed Bomb,Extreme Speed,Shadow Claw,Leftovers,Gluttony
+265,Wurmple,Modest,Bug Buzz,Shadow Ball,Stun Spore,U-turn,Life Orb,Swarm
+266,Silcoon,Modest,Bug Buzz,Shadow Ball,Stun Spore,U-turn,Life Orb,Swarm
+267,Beautifly,Modest,Bug Buzz,Shadow Ball,Stun Spore,U-turn,Life Orb,Swarm
+268,Cascoon,Calm,Toxic,Roost,Whirlwind,Bug Buzz,Leftovers,Shield Dust
+269,Dustox,Calm,Toxic,Roost,Whirlwind,Bug Buzz,Leftovers,Shield Dust
+270,Lotad,Modest,Rain Dance,Ice Beam,Surf,Grass Knot,Life Orb,Swift Swim
+271,Lombre,Modest,Rain Dance,Ice Beam,Surf,Grass Knot,Life Orb,Swift Swim
+272,Ludicolo,Modest,Rain Dance,Ice Beam,Surf,Grass Knot,Life Orb,Swift Swim
+273,Seedot,Adamant,Sucker Punch,Low Kick,Seed Bomb,Swords Dance,Life Orb,Chlorophyll
+274,Nuzleaf,Adamant,Sucker Punch,Low Kick,Seed Bomb,Swords Dance,Life Orb,Chlorophyll
+275,Shiftry,Adamant,Sucker Punch,Low Kick,Seed Bomb,Swords Dance,Life Orb,Chlorophyll
+276,Taillow,Jolly,Facade,Brave Bird,U-turn,Protect,Flame Orb,Guts
+277,Swellow,Jolly,Facade,Brave Bird,U-turn,Protect,Flame Orb,Guts
+278,Wingull,Bold,Roost,Surf,Ice Beam,Toxic,Leftovers,Keen Eye
+279,Pelipper,Bold,Roost,Surf,Ice Beam,Toxic,Leftovers,Keen Eye
+280,Ralts,Adamant,Close Combat,Shadow Sneak,Ice Punch,Leaf Blade,Life Orb,Steadfast
+281,Kirlia,Adamant,Close Combat,Shadow Sneak,Ice Punch,Leaf Blade,Life Orb,Steadfast
+282,Gardevoir,Timid,Psychic,Thunderbolt,Energy Ball,Focus Blast,Choice Scarf,Trace
+283,Surskit,Timid,Agility,Air Slash,Hydro Pump,Baton Pass,Leftovers,Intimidate
+284,Masquerain,Timid,Agility,Air Slash,Hydro Pump,Baton Pass,Leftovers,Intimidate
+285,Shroomish,Adamant,Seed Bomb,Mach Punch,Leech Seed,Swords Dance,Toxic Orb,Poison Heal
+286,Breloom,Adamant,Seed Bomb,Mach Punch,Leech Seed,Swords Dance,Toxic Orb,Poison Heal
+287,Slakoth,Adamant,Fire Punch,Earthquake,Pursuit,Return,Choice Band,Truant
+288,Vigoroth,Adamant,Fire Punch,Earthquake,Pursuit,Return,Choice Band,Truant
+289,Slaking,Adamant,Fire Punch,Earthquake,Pursuit,Return,Choice Band,Truant
+290,Nincada,Jolly,Shadow Sneak,X-Scissor,Swords Dance,Protect,Leftovers,Wonder Guard
+291,Ninjask,Adamant,Swords Dance,X-Scissor,Night Slash,Dig,Life Orb,Speed Boost
+292,Shedinja,Jolly,Shadow Sneak,X-Scissor,Swords Dance,Protect,Leftovers,Wonder Guard
+293,Whismur,Adamant,Return,Earthquake,Crunch,Substitute,Life Orb,Soundproof
+294,Loudred,Adamant,Return,Earthquake,Crunch,Substitute,Life Orb,Soundproof
+295,Exploud,Adamant,Return,Earthquake,Crunch,Substitute,Life Orb,Soundproof
+296,Makuhita,Brave,Payback,Close Combat,Ice Punch,Bullet Punch,Toxic Orb,Guts
+297,Hariyama,Brave,Payback,Close Combat,Ice Punch,Bullet Punch,Toxic Orb,Guts
+298,Azurill,Adamant,Aqua Jet,Superpower,Ice Punch,Return,Choice Band,Huge Power
+299,Nosepass,Calm,Thunder Wave,Stealth Rock,Earth Power,Discharge,Leftovers,Magnet Pull
+300,Skitty,Adamant,Body Slam,Substitute,Wish,Baton Pass,Leftovers,Cute Charm
+301,Delcatty,Adamant,Body Slam,Substitute,Wish,Baton Pass,Leftovers,Cute Charm
+302,Sableye,Bold,Recover,Will-O-Wisp,Toxic,Seismic Toss,Leftovers,Keen Eye
+303,Mawile,Impish,Swords Dance,Iron Head,Sucker Punch,Baton Pass,Leftovers,Intimidate
+304,Aron,Brave,Head Smash,Earthquake,Metal Burst,Fire Punch,Choice Band,Rock Head
+305,Lairon,Brave,Head Smash,Earthquake,Metal Burst,Fire Punch,Choice Band,Rock Head
+306,Aggron,Brave,Head Smash,Earthquake,Metal Burst,Fire Punch,Choice Band,Rock Head
+307,Meditite,Jolly,High Jump Kick,Ice Punch,Thunder Punch,Psycho Cut,Choice Scarf,Pure Power
+308,Medicham,Jolly,High Jump Kick,Ice Punch,Thunder Punch,Psycho Cut,Choice Scarf,Pure Power
+309,Electrike,Timid,Thunderbolt,Flamethrower,Substitute,Overheat,Expert Belt,Static
+310,Manectric,Timid,Thunderbolt,Flamethrower,Substitute,Overheat,Expert Belt,Static
+311,Plusle,Timid,Nasty Plot,Thunderbolt,Grass Knot,Endure,Life Orb,Plus
+312,Minun,Modest,Thunderbolt,Nasty Plot,Agility,Grass Knot,Life Orb,Minus
+313,Volbeat,Timid,Baton Pass,Tail Glow,Encore,Substitute,Leftovers,Swarm
+314,Illumise,Timid,Bug Buzz,Thunderbolt,Encore,Substitute,Life Orb,Tinted Lens
+315,Roselia,Bold,Spikes,Toxic Spikes,Grass Knot,Stun Spore,Black Sludge,Natural Cure
+316,Gulpin,Careful,Gunk Shot,Earthquake,Seed Bomb,Encore,Leftovers,Liquid Ooze
+317,Swalot,Careful,Gunk Shot,Earthquake,Seed Bomb,Encore,Leftovers,Liquid Ooze
+318,Carvanha,Adamant,Aqua Jet,Crunch,Waterfall,Taunt,Leftovers,Rough Skin
+319,Sharpedo,Adamant,Aqua Jet,Crunch,Waterfall,Taunt,Leftovers,Rough Skin
+320,Wailmer,Timid,Surf,Ice Beam,Substitute,Rest,Leftovers,Water Veil
+321,Wailord,Timid,Surf,Ice Beam,Substitute,Rest,Leftovers,Water Veil
+322,Numel,Brave,Explosion,Earthquake,Stealth Rock,Lava Plume,Leftovers,Solid Rock
+323,Camerupt,Brave,Explosion,Earthquake,Stealth Rock,Lava Plume,Leftovers,Solid Rock
+324,Torkoal,Relaxed,Rapid Spin,Flamethrower,Earthquake,Protect,Leftovers,White Smoke
+325,Spoink,Calm,Heal Bell,Thunder Wave,Reflect,Psychic,Leftovers,Thick Fat
+326,Grumpig,Calm,Heal Bell,Thunder Wave,Reflect,Psychic,Leftovers,Thick Fat
+327,Spinda,Jolly,Fake Out,Low Kick,Endure,Trick,Leftovers,Own Tempo
+328,Trapinch,Jolly,Earthquake,Outrage,U-turn,Thunder Punch,Choice Scarf,Levitate
+329,Vibrava,Jolly,Earthquake,Outrage,U-turn,Thunder Punch,Choice Scarf,Levitate
+330,Flygon,Jolly,Earthquake,Outrage,U-turn,Thunder Punch,Choice Scarf,Levitate
+331,Cacnea,Modest,Spikes,Energy Ball,Dark Pulse,Encore,Leftovers,Sand Veil
+332,Cacturne,Modest,Spikes,Energy Ball,Dark Pulse,Encore,Leftovers,Sand Veil
+333,Swablu,Calm,Heal Bell,Roost,Draco Meteor,Tailwind,Leftovers,Natural Cure
+334,Altaria,Calm,Heal Bell,Roost,Draco Meteor,Tailwind,Leftovers,Natural Cure
+335,Zangoose,Jolly,Swords Dance,Return,Close Combat,Shadow Claw,Life Orb,Immunity
+336,Seviper,Adamant,Poison Jab,Earthquake,Sucker Punch,Aqua Tail,Life Orb,Shed Skin
+337,Lunatone,Timid,Calm Mind,Psychic,Earth Power,Substitute,Leftovers,Levitate
+338,Solrock,Impish,Rock Slide,Stealth Rock,Will-O-Wisp,Explosion,Leftovers,Levitate
+339,Barboach,Jolly,Earthquake,Waterfall,Dragon Dance,Substitute,Leftovers,Anticipation
+340,Whiscash,Jolly,Earthquake,Waterfall,Dragon Dance,Substitute,Leftovers,Anticipation
+341,Corphish,Jolly,Dragon Dance,Crabhammer,Crunch,Superpower,Life Orb,Hyper Cutter
+342,Crawdaunt,Jolly,Dragon Dance,Crabhammer,Crunch,Superpower,Life Orb,Hyper Cutter
+343,Baltoy,Calm,Stealth Rock,Ice Beam,Earth Power,Reflect,Leftovers,Levitate
+344,Claydol,Calm,Stealth Rock,Ice Beam,Earth Power,Reflect,Leftovers,Levitate
+345,Lileep,Careful,Curse,Rock Slide,Seed Bomb,Recover,Leftovers,Suction Cups
+346,Cradily,Careful,Curse,Rock Slide,Seed Bomb,Recover,Leftovers,Suction Cups
+347,Anorith,Adamant,Stone Edge,Earthquake,X-Scissor,Curse,Leftovers,Battle Armor
+348,Armaldo,Adamant,Stone Edge,Earthquake,X-Scissor,Curse,Leftovers,Battle Armor
+349,Feebas,Bold,Recover,Surf,Ice Beam,Haze,Leftovers,Marvel Scale
+350,Milotic,Bold,Recover,Surf,Ice Beam,Haze,Leftovers,Marvel Scale
+351,Castform,Calm,Thunder Wave,Weather Ball,Sunny Day,Ice Beam,Heat Rock,Forecast
+352,Kecleon,Careful,Recover,Stealth Rock,Return,Fire Punch,Leftovers,Color Change
+353,Shuppet,Adamant,Shadow Claw,Destiny Bond,Trick Room,Will-O-Wisp,Life Orb,Frisk
+354,Banette,Adamant,Shadow Claw,Destiny Bond,Trick Room,Will-O-Wisp,Life Orb,Frisk
+355,Duskull,Adamant,Earthquake,Shadow Sneak,Ice Punch,Trick Room,Leftovers,Pressure
+356,Dusclops,Adamant,Earthquake,Shadow Sneak,Ice Punch,Trick Room,Leftovers,Pressure
+357,Tropius,Bold,Roost,Toxic,Energy Ball,Air Slash,Leftovers,Chlorophyll
+358,Chimecho,Timid,Psychic,Energy Ball,Trick,Healing Wish,Choice Scarf,Levitate
+359,Absol,Jolly,Sucker Punch,Superpower,Stone Edge,Thunder Wave,Life Orb,Super Luck
+360,Wynaut,Calm,Encore,Mirror Coat,Safeguard,Counter,Leftovers,Shadow Tag
+361,Snorunt,Jolly,Spikes,Taunt,Explosion,Substitute,Life Orb,Inner Focus
+362,Glalie,Jolly,Spikes,Taunt,Explosion,Substitute,Life Orb,Inner Focus
+363,Spheal,Bold,Protect,Surf,Toxic,Blizzard,Leftovers,Ice Body
+364,Sealeo,Bold,Protect,Surf,Toxic,Blizzard,Leftovers,Ice Body
+365,Walrein,Bold,Protect,Surf,Toxic,Blizzard,Leftovers,Ice Body
+366,Clamperl,Timid,Ice Beam,Hydro Pump,Surf,Psychic,Life Orb,Swift Swim
+367,Huntail,Timid,Rain Dance,Surf,Ice Beam,Hydro Pump,Life Orb,Swift Swim
+368,Gorebyss,Timid,Ice Beam,Hydro Pump,Surf,Psychic,Life Orb,Swift Swim
+369,Relicanth,Adamant,Stealth Rock,Head Smash,Waterfall,Earthquake,Leftovers,Rock Head
+370,Luvdisc,Modest,Rain Dance,Surf,Ice Beam,Toxic,Damp Rock,Swift Swim
+371,Bagon,Jolly,Dragon Dance,Outrage,Earthquake,Fire Blast,Life Orb,Intimidate
+372,Shelgon,Jolly,Dragon Dance,Outrage,Earthquake,Fire Blast,Life Orb,Intimidate
+373,Salamence,Jolly,Dragon Dance,Outrage,Earthquake,Fire Blast,Life Orb,Intimidate
+374,Beldum,Adamant,Meteor Mash,Earthquake,Explosion,Stealth Rock,Leftovers,Clear Body
+375,Metang,Adamant,Meteor Mash,Earthquake,Explosion,Stealth Rock,Leftovers,Clear Body
+376,Metagross,Adamant,Meteor Mash,Earthquake,Explosion,Stealth Rock,Leftovers,Clear Body
+377,Regirock,Adamant,Rock Slide,Rest,Earthquake,Curse,Leftovers,Clear Body
+378,Regice,Modest,Ice Beam,Thunderbolt,Focus Blast,Rock Polish,Life Orb,Clear Body
+379,Registeel,Careful,Stealth Rock,Seismic Toss,Explosion,Thunder Wave,Leftovers,Clear Body
+380,Latias,Timid,Draco Meteor,Surf,Thunderbolt,Dragon Pulse,Choice Specs,Levitate
+381,Latios,Timid,Calm Mind,Draco Meteor,Thunder,Recover,Soul Dew,Levitate
+382,Kyogre,Timid,Ice Beam,Thunder,Surf,Calm Mind,Leftovers,Drizzle
+383,Groudon,Adamant,Earthquake,Dragon Claw,Rock Polish,Fire Punch,Leftovers,Drought
+384,Rayquaza,Jolly,Extreme Speed,Outrage,Earthquake,Dragon Dance,Life Orb,Air Lock
+385,Jirachi,Jolly,Iron Head,Fire Punch,Body Slam,U-turn,Leftovers,Serene Grace
+386,Deoxys,Jolly,Spikes,Taunt,Stealth Rock,Thunder Wave,Leftovers,Pressure
+387,Turtwig,Adamant,Earthquake,Wood Hammer,Stone Edge,Rock Polish,Leftovers,Overgrow
+388,Grotle,Adamant,Earthquake,Wood Hammer,Stone Edge,Rock Polish,Leftovers,Overgrow
+389,Torterra,Adamant,Earthquake,Wood Hammer,Stone Edge,Rock Polish,Leftovers,Overgrow
+390,Chimchar,Jolly,Close Combat,U-turn,Flare Blitz,Thunder Punch,Expert Belt,Blaze
+391,Monferno,Jolly,Close Combat,U-turn,Flare Blitz,Thunder Punch,Expert Belt,Blaze
+392,Infernape,Jolly,Close Combat,U-turn,Flare Blitz,Thunder Punch,Expert Belt,Blaze
+393,Piplup,Modest,Ice Beam,Hydro Pump,Grass Knot,Stealth Rock,Leftovers,Torrent
+394,Prinplup,Modest,Ice Beam,Hydro Pump,Grass Knot,Stealth Rock,Leftovers,Torrent
+395,Empoleon,Modest,Ice Beam,Hydro Pump,Grass Knot,Stealth Rock,Leftovers,Torrent
+396,Starly,Jolly,Close Combat,Brave Bird,U-turn,Facade,Choice Scarf,Intimidate
+397,Staravia,Jolly,Close Combat,Brave Bird,U-turn,Facade,Choice Scarf,Intimidate
+398,Staraptor,Jolly,Close Combat,Brave Bird,U-turn,Facade,Choice Scarf,Intimidate
+399,Bidoof,Jolly,Stealth Rock,Return,Waterfall,Taunt,Leftovers,Unaware
+400,Bibarel,Jolly,Stealth Rock,Return,Waterfall,Taunt,Leftovers,Unaware
+401,Kricketot,Jolly,Swords Dance,Substitute,X-Scissor,Perish Song,Leftovers,Swarm
+402,Kricketune,Jolly,Swords Dance,Substitute,X-Scissor,Perish Song,Leftovers,Swarm
+403,Shinx,Jolly,Crunch,Ice Fang,Fire Fang,Superpower,Choice Scarf,Intimidate
+404,Luxio,Jolly,Crunch,Ice Fang,Fire Fang,Superpower,Choice Scarf,Intimidate
+405,Luxray,Jolly,Crunch,Ice Fang,Fire Fang,Superpower,Choice Scarf,Intimidate
+406,Budew,Bold,Spikes,Toxic Spikes,Grass Knot,Stun Spore,Black Sludge,Natural Cure
+407,Roserade,Bold,Spikes,Toxic Spikes,Grass Knot,Stun Spore,Black Sludge,Natural Cure
+408,Cranidos,Brave,Earthquake,Head Smash,Fire Punch,Giga Impact,Choice Band,Mold Breaker
+409,Rampardos,Brave,Earthquake,Head Smash,Fire Punch,Giga Impact,Choice Band,Mold Breaker
+410,Shieldon,Bold,Protect,Roar,Toxic,Metal Burst,Leftovers,Sturdy
+411,Bastiodon,Bold,Protect,Roar,Toxic,Metal Burst,Leftovers,Sturdy
+412,Burmy,Timid,Bug Buzz,Air Slash,Shadow Ball,U-turn,Choice Scarf,Swarm
+413,Wormadam,Modest,Leaf Storm,Psychic,Signal Beam,Energy Ball,Choice Specs,Anticipation
+414,Mothim,Timid,Bug Buzz,Air Slash,Shadow Ball,U-turn,Choice Scarf,Swarm
+415,Combee,Careful,Attack Order,Substitute,Toxic,Heal Order,Leftovers,Pressure
+416,Vespiquen,Careful,Attack Order,Substitute,Toxic,Heal Order,Leftovers,Pressure
+417,Pachirisu,Calm,Light Screen,Discharge,Toxic,Super Fang,Leftovers,Pickup
+418,Buizel,Adamant,Waterfall,Ice Punch,Crunch,Brick Break,Choice Band,Swift Swim
+419,Floatzel,Adamant,Waterfall,Ice Punch,Crunch,Brick Break,Choice Band,Swift Swim
+420,Cherubi,Modest,Sunny Day,Aromatherapy,Energy Ball,Grass Whistle,Heat Rock,Flower Gift
+421,Cherrim,Modest,Sunny Day,Aromatherapy,Energy Ball,Grass Whistle,Heat Rock,Flower Gift
+422,Shellos,Careful,Curse,Waterfall,Recover,Earthquake,Leftovers,Sticky Hold
+423,Gastrodon,Careful,Curse,Waterfall,Recover,Earthquake,Leftovers,Sticky Hold
+424,Ambipom,Jolly,Fake Out,U-turn,Low Kick,Pursuit,Silk Scarf,Technician
+425,Drifloon,Modest,Calm Mind,Thunderbolt,Shadow Ball,Weather Ball,Leftovers,Unburden
+426,Drifblim,Modest,Calm Mind,Thunderbolt,Shadow Ball,Weather Ball,Leftovers,Unburden
+427,Buneary,Jolly,Switcheroo,Encore,Baton Pass,Substitute,Flame Orb,Klutz
+428,Lopunny,Jolly,Switcheroo,Encore,Baton Pass,Substitute,Flame Orb,Klutz
+429,Mismagius,Timid,Shadow Ball,Nasty Plot,Will-O-Wisp,Substitute,Leftovers,Levitate
+430,Honchkrow,Adamant,Superpower,Sucker Punch,Brave Bird,Roost,Life Orb,Super Luck
+431,Glameow,Jolly,Fake Out,Taunt,U-turn,Return,Silk Scarf,Thick Fat
+432,Purugly,Jolly,Fake Out,Taunt,U-turn,Return,Silk Scarf,Thick Fat
+433,Chingling,Timid,Psychic,Energy Ball,Trick,Healing Wish,Choice Scarf,Levitate
+434,Stunky,Adamant,Poison Jab,Sucker Punch,Explosion,Toxic,Black Sludge,Aftermath
+435,Skuntank,Adamant,Poison Jab,Sucker Punch,Explosion,Toxic,Black Sludge,Aftermath
+436,Bronzor,Brave,Gyro Ball,Earthquake,Explosion,Stealth Rock,Leftovers,Levitate
+437,Bronzong,Brave,Gyro Ball,Earthquake,Explosion,Stealth Rock,Leftovers,Levitate
+438,Bonsly,Adamant,Stone Edge,Wood Hammer,Low Kick,Explosion,Choice Band,Rock Head
+439,Mime Jr.,Timid,Psychic,Hyper Beam,Focus Blast,Thunderbolt,Leftovers,Soundproof
+440,Happiny,Bold,Soft-Boiled,Thunder Wave,Stealth Rock,Ice Beam,Leftovers,Natural Cure
+441,Chatot,Timid,Nasty Plot,Hyper Voice,Heat Wave,Encore,Life Orb,Tangled Feet
+442,Spiritomb,Sassy,Will-O-Wisp,Pursuit,Shadow Ball,Pain Split,Leftovers,Pressure
+443,Gible,Jolly,Earthquake,Outrage,Sleep Talk,Swords Dance,Leftovers,Sand Veil
+444,Gabite,Jolly,Earthquake,Outrage,Sleep Talk,Swords Dance,Leftovers,Sand Veil
+445,Garchomp,Jolly,Earthquake,Outrage,Sleep Talk,Swords Dance,Leftovers,Sand Veil
+446,Munchlax,Adamant,Crunch,Self-Destruct,Curse,Earthquake,Leftovers,Thick Fat
+447,Riolu,Adamant,Close Combat,Extreme Speed,Swords Dance,Bullet Punch,Life Orb,Inner Focus
+448,Lucario,Adamant,Close Combat,Extreme Speed,Swords Dance,Bullet Punch,Life Orb,Inner Focus
+449,Hippopotas,Impish,Earthquake,Slack Off,Stealth Rock,Roar,Leftovers,Sand Stream
+450,Hippowdon,Impish,Earthquake,Slack Off,Stealth Rock,Roar,Leftovers,Sand Stream
+451,Skorupi,Jolly,Crunch,Earthquake,Swords Dance,Toxic Spikes,Black Sludge,Battle Armor
+452,Drapion,Jolly,Crunch,Earthquake,Swords Dance,Toxic Spikes,Black Sludge,Battle Armor
+453,Croagunk,Jolly,Sucker Punch,Swords Dance,Low Kick,Poison Jab,Life Orb,Dry Skin
+454,Toxicroak,Jolly,Sucker Punch,Swords Dance,Low Kick,Poison Jab,Life Orb,Dry Skin
+455,Carnivine,Careful,Sleep Powder,Power Whip,Synthesis,Return,Leftovers,Levitate
+456,Finneon,Timid,Rain Dance,Safeguard,Surf,U-turn,Damp Rock,Swift Swim
+457,Lumineon,Timid,Rain Dance,Safeguard,Surf,U-turn,Damp Rock,Swift Swim
+458,Mantyke,Modest,Rain Dance,Surf,Ice Beam,Protect,Life Orb,Swift Swim
+459,Snover,Adamant,Ice Shard,Wood Hammer,Leech Seed,Protect,Leftovers,Snow Warning
+460,Abomasnow,Adamant,Ice Shard,Wood Hammer,Leech Seed,Protect,Leftovers,Snow Warning
+461,Weavile,Jolly,Ice Shard,Low Kick,Night Slash,Swords Dance,Life Orb,Pressure
+462,Magnezone,Timid,Thunderbolt,Flash Cannon,Explosion,Thunder,Choice Scarf,Magnet Pull
+463,Lickilicky,Brave,Earthquake,Explosion,Power Whip,Wish,Leftovers,Own Tempo
+464,Rhyperior,Adamant,Earthquake,Stone Edge,Ice Punch,Swords Dance,Leftovers,Solid Rock
+465,Tangrowth,Calm,Leech Seed,Leaf Storm,Protect,Synthesis,Life Orb,Chlorophyll
+466,Electivire,Jolly,Ice Punch,Thunder Punch,Earthquake,Cross Chop,Expert Belt,Motor Drive
+467,Magmortar,Modest,Thunderbolt,Fire Blast,Focus Blast,Flamethrower,Expert Belt,Flame Body
+468,Togekiss,Calm,Air Slash,Thunder Wave,Aura Sphere,Nasty Plot,Leftovers,Serene Grace
+469,Yanmega,Modest,Bug Buzz,Air Slash,Protect,Detect,Life Orb,Speed Boost
+470,Leafeon,Jolly,Leaf Blade,Swords Dance,Body Slam,Baton Pass,Leftovers,Leaf Guard
+471,Glaceon,Timid,Ice Beam,Shadow Ball,Blizzard,Baton Pass,Life Orb,Snow Cloak
+472,Gliscor,Jolly,Earthquake,Roost,Ice Fang,Taunt,Leftovers,Hyper Cutter
+473,Mamoswine,Jolly,Earthquake,Ice Shard,Substitute,Superpower,Life Orb,Oblivious
+474,Porygon-Z,Modest,Ice Beam,Tri Attack,Thunderbolt,Dark Pulse,Choice Specs,Download
+475,Gallade,Adamant,Close Combat,Shadow Sneak,Ice Punch,Leaf Blade,Life Orb,Steadfast
+476,Probopass,Calm,Thunder Wave,Stealth Rock,Earth Power,Discharge,Leftovers,Magnet Pull
+477,Dusknoir,Adamant,Earthquake,Shadow Sneak,Ice Punch,Trick Room,Leftovers,Pressure
+478,Froslass,Timid,Spikes,Icy Wind,Shadow Ball,Destiny Bond,Leftovers,Snow Cloak
+479,Rotom,Timid,Thunderbolt,Shadow Ball,Hydro Pump,Thunder,Choice Scarf,Levitate
+480,Uxie,Impish,U-turn,Stealth Rock,Thunder Wave,Trick,Damp Rock,Levitate
+481,Mesprit,Bold,Ice Beam,Thunderbolt,Psychic,Healing Wish,Leftovers,Levitate
+482,Azelf,Jolly,Explosion,U-turn,Zen Headbutt,Ice Punch,Choice Band,Levitate
+483,Dialga,Careful,Outrage,Sleep Talk,Stealth Rock,Roar,Leftovers,Pressure
+484,Palkia,Timid,Thunder,Spacial Rend,Surf,Fire Blast,Lustrous Orb,Pressure
+485,Heatran,Timid,Earth Power,Fire Blast,Stealth Rock,Protect,Leftovers,Flash Fire
+486,Regigigas,Impish,Thunder Wave,Substitute,Knock Off,Headbutt,Leftovers,Slow Start
+487,Giratina,Timid,Draco Meteor,Thunder,Will-O-Wisp,Shadow Ball,Griseous Orb,Levitate
+488,Cresselia,Relaxed,Lunar Dance,Reflect,Light Screen,Trick Room,Light Clay,Levitate
+489,Phione,Timid,Surf,Ice Beam,Substitute,Heal Bell,Leftovers,Hydration
+490,Manaphy,Timid,Tail Glow,Rest,Surf,Ice Beam,Leftovers,Hydration
+491,Darkrai,Timid,Dark Pulse,Ice Beam,Focus Blast,Thunder,Choice Scarf,Bad Dreams
+492,Shaymin,Timid,Seed Flare,Rest,Sleep Talk,Earth Power,Leftovers,Natural Cure
+493,Arceus,Adamant,Extreme Speed,Shadow Claw,Earthquake,Brick Break,Choice Band,Multitype
