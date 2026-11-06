@@ -30,7 +30,7 @@ function renderButton(generation: number, onEnhance: () => Promise<string>) {
 
 describe('EnhanceButton', () => {
   it('is labelled as Generation 4 only', () => {
-    expect(renderButton(4, async () => '').textContent).toContain('Enhance (Gen 4 only)')
+    expect(renderButton(4, async () => '').textContent).toContain('Enhance PKMN (Gen 4 only)')
   })
 
   it('is disabled outside Generation 4', () => {

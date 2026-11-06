@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Flex, Space, Tabs } from 'antd'
+import { Flex, Tabs } from 'antd'
 import { draftHandle } from '@pkhex-everywhere/engine'
 import { useEngine, usePokemon, usePokemonDetails } from '@pkhex-everywhere/react'
 import { EnhanceButton } from '../../components/EnhanceButton'
@@ -34,16 +34,14 @@ export function DraftEditor({ actions }: DraftEditorProps) {
           { key: 'trainer', label: 'Trainer', children: <TrainerTab /> },
         ]}
       />
-      <Flex justify="end">
-        <Space>
-          <EnhanceButton
-            onEnhance={async () => {
-              await engine.pokemon.enhance(draftHandle)
-              return 'Save the Pokémon to keep the changes.'
-            }}
-          />
-          {actions}
-        </Space>
+      <Flex vertical align="end" gap={12}>
+        {actions}
+        <EnhanceButton
+          onEnhance={async () => {
+            await engine.pokemon.enhance(draftHandle)
+            return 'Save the Pokémon to keep the changes.'
+          }}
+        />
       </Flex>
     </Flex>
   )

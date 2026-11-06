@@ -27,7 +27,7 @@ export function EnhanceButton({ onEnhance }: EnhanceButtonProps) {
 
   const button = (
     <Button loading={busy} disabled={!supported} onClick={() => void enhance()}>
-      Enhance (Gen 4 only)
+      Enhance PKMN (Gen 4 only)
     </Button>
   )
   if (supported) return button
