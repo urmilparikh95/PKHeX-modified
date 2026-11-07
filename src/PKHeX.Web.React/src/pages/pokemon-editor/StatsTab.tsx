@@ -3,7 +3,6 @@ import type { DescriptionsProps } from 'antd'
 import { draftHandle, type StatPatch, type StatValues } from '@pkhex-everywhere/engine'
 import { useLoadedGame, useQuery } from '@pkhex-everywhere/react'
 import { gameName, statsAreApproximate } from '../../capabilities'
-import { PlugInActionButton } from '../../components/PlugInActionButton'
 import { useDraft } from './useDraft'
 
 type Stat = keyof StatValues
@@ -22,7 +21,6 @@ const total = (values: StatValues) => stats.reduce((sum, stat) => sum + values[s
 export function StatsTab() {
   const { details, submit } = useDraft()
   const { game } = useLoadedGame()
-  const actions = useQuery('plugins.actions', 'pokemonStats', draftHandle)
   const screens = Grid.useBreakpoint()
   const layout = screens.sm ? 'horizontal' : 'vertical'
 
@@ -110,13 +108,6 @@ export function StatsTab() {
             },
           ]}
         />
-      )}
-      {actions.length > 0 && (
-        <Space wrap size={20} align="center">
-          {actions.map((action) => (
-            <PlugInActionButton key={action.id} action={action} target={draftHandle} />
-          ))}
-        </Space>
       )}
     </Flex>
   )

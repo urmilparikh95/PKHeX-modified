@@ -5,18 +5,15 @@
   "type": "module",
   "scripts": {
     "dev": "./dev.sh",
-    "build": "tsc --noEmit && dotnet publish ../PKHeX.Everywhere.Engine.Host -c Release && npm run build:blog && vite build",
+    "build": "tsc --noEmit && dotnet publish ../PKHeX.Everywhere.Engine.Host -c Release && vite build",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "build:blog": "cd blog && npm ci --include=dev && npm run build"
+    "test": "vitest run"
   },
   "dependencies": {
     "@ant-design/icons": "^6.3.4",
-    "@ant-design/plots": "^2.6.8",
     "@pkhex-everywhere/engine": "file:../PKHeX.Everywhere.Engine.Sdk/packages/engine",
     "@pkhex-everywhere/react": "file:../PKHeX.Everywhere.Engine.Sdk/packages/react",
-    "@sentry/browser": "^11.2.0",
     "antd": "^6.6.5",
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.23",

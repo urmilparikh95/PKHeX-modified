@@ -1,7 +1,7 @@
 import { Component, type ReactNode } from 'react'
 import { Alert, Descriptions, Typography } from 'antd'
 import type { Engine, SaveVersion } from '@pkhex-everywhere/engine'
-import { issueLink, reportPageError, toPageError, type PageError } from './pageError'
+import { issueLink, toPageError, type PageError } from './pageError'
 
 interface Props {
   engine: Engine
@@ -27,7 +27,6 @@ export class RoutedErrorBoundary extends Component<Props, State> {
       .version()
       .catch(() => null)
       .then((game) => {
-        reportPageError(error, pageError, game)
         if (this.state.error === pageError) this.setState({ game })
       })
   }

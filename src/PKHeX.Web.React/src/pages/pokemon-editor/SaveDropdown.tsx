@@ -1,8 +1,7 @@
 import { EllipsisOutlined } from '@ant-design/icons'
 import { Button, Dropdown, Space } from 'antd'
 import { draftHandle } from '@pkhex-everywhere/engine'
-import { useEngine, useQuery } from '@pkhex-everywhere/react'
-import { PlugInActionButton } from '../../components/PlugInActionButton'
+import { useEngine } from '@pkhex-everywhere/react'
 import { downloadFile } from '../../host'
 
 interface SaveDropdownProps {
@@ -11,7 +10,6 @@ interface SaveDropdownProps {
 
 export function SaveDropdown({ onSave }: SaveDropdownProps) {
   const engine = useEngine()
-  const actions = useQuery('plugins.actions', 'pokemon', draftHandle)
 
   const exportFile = async () => {
     const { bytes, fileName } = await engine.pokemon.export(draftHandle)
@@ -28,10 +26,6 @@ export function SaveDropdown({ onSave }: SaveDropdownProps) {
         menu={{
           items: [
             { key: 'export', label: 'Export *.pk', onClick: () => void exportFile() },
-            ...actions.map((action) => ({
-              key: action.id,
-              label: <PlugInActionButton action={action} target={draftHandle} />,
-            })),
           ],
         }}
       >

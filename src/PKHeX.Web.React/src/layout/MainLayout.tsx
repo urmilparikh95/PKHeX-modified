@@ -1,10 +1,8 @@
 import { Suspense, type ReactNode } from 'react'
 import {
-  ApiOutlined,
   FlagOutlined,
   HomeOutlined,
   InboxOutlined,
-  LineChartOutlined,
   SaveOutlined,
   SettingOutlined,
   ShopOutlined,
@@ -12,13 +10,12 @@ import {
 } from '@ant-design/icons'
 import { Button, Layout, Menu, type MenuProps } from 'antd'
 import { Link, useLocation } from 'react-router'
-import { useLoadedGame, useQuery } from '@pkhex-everywhere/react'
+import { useLoadedGame } from '@pkhex-everywhere/react'
 import { useNavigate } from '../host'
 import { routes } from '../routes'
 import { Footer } from './Footer'
 import { RoutedContent } from './RoutedContent'
 import { menuEntries, type MenuEntry, type MenuIcon } from './menu'
-import { NewsBanner } from './NewsBanner'
 
 const icons: Record<MenuIcon, ReactNode> = {
   home: <HomeOutlined />,
@@ -26,25 +23,21 @@ const icons: Record<MenuIcon, ReactNode> = {
   inbox: <InboxOutlined />,
   shop: <ShopOutlined />,
   flag: <FlagOutlined />,
-  api: <ApiOutlined />,
-  'line-chart': <LineChartOutlined />,
   save: <SaveOutlined />,
 }
 
 type MenuItem = Required<MenuProps>['items'][number]
 
-function toMenuItem({ route, label, icon, children }: MenuEntry): MenuItem {
-  if (children) return { key: `${route}#group`, icon: icon && icons[icon], label, children: children.map(toMenuItem) }
+function toMenuItem({ route, label, icon }: MenuEntry): MenuItem {
   return { key: route, icon: icon && icons[icon], label: <Link to={route}>{label}</Link> }
 }
 
 function SideMenu() {
   const { pathname } = useLocation()
   const { game } = useLoadedGame()
-  const installed = useQuery('plugins.installed')
 
   return (
-    <Menu theme="dark" mode="inline" selectedKeys={[pathname]} items={menuEntries(game, installed).map(toMenuItem)} />
+    <Menu theme="dark" mode="inline" selectedKeys={[pathname]} items={menuEntries(game).map(toMenuItem)} />
   )
 }
 
@@ -54,7 +47,6 @@ export function MainLayout() {
 
   return (
     <Layout style={{ minHeight: '100vh' }}>
-      <NewsBanner />
       <Layout.Sider
         collapsible
         breakpoint="lg"

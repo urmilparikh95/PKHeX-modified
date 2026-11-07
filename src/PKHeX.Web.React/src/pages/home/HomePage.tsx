@@ -1,13 +1,10 @@
 import { useState } from 'react'
-import { App, Descriptions, Flex, Input, InputNumber, Space, Typography } from 'antd'
+import { App, Descriptions, Flex, Input, InputNumber } from 'antd'
 import { EngineError } from '@pkhex-everywhere/engine'
-import { useEngine, useLoadedGame, useQuery, useTrainer } from '@pkhex-everywhere/react'
-import { AdSlot } from '../../components/AdSlot'
+import { useEngine, useLoadedGame, useTrainer } from '@pkhex-everywhere/react'
 import { EnhanceButton } from '../../components/EnhanceButton'
-import { PlugInActionButton } from '../../components/PlugInActionButton'
 import { TrainerGenderRadio } from '../../components/TrainerGenderRadio'
 
-const multiplexAdSlot = '7470710144'
 const maxMoney = 999_999
 const maxBattlePoints = 65_535
 
@@ -24,8 +21,6 @@ export default function HomePage() {
           <AddHeldItems />
         </Flex>
       )}
-      <AdSlot slot={multiplexAdSlot} format="autorelaxed" />
-      <QuickActions />
     </Flex>
   )
 }
@@ -158,22 +153,6 @@ function AddHeldItems() {
         return `${count} held items added to your Items pouch.`
       }}
     />
-  )
-}
-
-function QuickActions() {
-  const actions = useQuery('plugins.actions', 'quick', null)
-  if (actions.length === 0) return null
-
-  return (
-    <Flex vertical align="center" gap={20} style={{ marginTop: 20 }}>
-      <Typography.Title level={1}>Quick Actions</Typography.Title>
-      <Space wrap size={20} align="center">
-        {actions.map((action) => (
-          <PlugInActionButton key={action.id} action={action} />
-        ))}
-      </Space>
-    </Flex>
   )
 }
 

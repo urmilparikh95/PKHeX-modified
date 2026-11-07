@@ -1,4 +1,4 @@
-import './startSentry'
+import './clearStorage'
 import 'antd/dist/reset.css'
 import './index.css'
 import { start } from './main'

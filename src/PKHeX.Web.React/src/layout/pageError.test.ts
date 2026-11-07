@@ -1,10 +1,6 @@
-import { afterEach, describe, expect, it, vi } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import { EngineError, type SaveVersion } from '@pkhex-everywhere/engine'
-import { issueLink, reportPageError, toPageError } from './pageError'
-import { startGoogleAnalytics } from '../googleAnalytics'
-import { captureError } from '../sentry'
-
-vi.mock('../sentry', async (original) => ({ ...(await original<typeof import('../sentry')>()), captureError: vi.fn() }))
+import { issueLink, toPageError } from './pageError'
 
 const emerald: SaveVersion = { version: 'Emerald', versionId: 3, generation: 'Gen3', generationId: 3, formatId: null }
 
@@ -15,11 +11,6 @@ function boom() {
 }
 
 describe('page errors', () => {
-  afterEach(() => {
-    globalThis.gtag = undefined
-    vi.mocked(captureError).mockClear()
-  })
-
   it('gives every error a tracking id', () => {
     const first = toPageError(boom())
     const second = toPageError(boom())
@@ -78,46 +69,5 @@ describe('page errors', () => {
 
     expect(error.unsupportedFormat).toBe(true)
     expect(issueLink(error, emerald)).toBeNull()
-  })
-
-  it('sends unexpected_error to Google Analytics', () => {
-    const gtag = vi.fn()
-    globalThis.gtag = gtag
-    startGoogleAnalytics({ onEvent: () => () => {} }, true)
-    gtag.mockClear()
-    document.head.innerHTML = '<base href="/" />'
-    history.replaceState(null, '', '/party')
-    const error = boom()
-
-    reportPageError(error, toPageError(error, 'b7a9f2c4'), emerald)
-
-    expect(gtag).toHaveBeenCalledWith('event', 'unexpected_error', {
-      current_route: 'party',
-      exception_message: 'Cannot read properties of undefined',
-      exception_stack_trace: error.stack,
-      exception_type: 'TypeError',
-      exception_id: 'b7a9f2c4',
-      version_name: 'Emerald',
-      version_id: 3,
-      generation_name: 'Gen3',
-      generation_id: 3,
-      format_id: null,
-    })
-  })
-
-  it('captures the error in Sentry with its tracking id', () => {
-    const error = boom()
-
-    reportPageError(error, toPageError(error, 'b7a9f2c4'), null)
-
-    expect(captureError).toHaveBeenCalledWith(error, { exception_id: 'b7a9f2c4' })
-  })
-
-  it('leaves Engine errors to the Engine watcher in Sentry', () => {
-    const error = new EngineError('no-save', 'No save is loaded.')
-
-    reportPageError(error, toPageError(error), null)
-
-    expect(captureError).not.toHaveBeenCalled()
   })
 })
